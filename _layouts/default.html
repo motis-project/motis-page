@@ -4,7 +4,6 @@
 {%- include head.html -%}
 
 <body>
-  <canvas class="background"></canvas>
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     {%- include header.html -%}
 
@@ -15,20 +14,5 @@
     {%- include footer.html -%}
   </div>
 </body>
-
-<script src="{{ "/assets/particles.min.js" | relative_url }}"></script>
-<script>
-  window.onload = function() {
-    var particles = Particles.init({
-      selector: '.background',
-      color: '#999999',
-      connectParticles: true,
-      maxParticles: 500,
-      minDistance: 130,
-      sizeVariations: 4
-    });
-    console.log('particles initialized');
-  };
-</script>
 
 </html>
