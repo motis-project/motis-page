@@ -5,8 +5,9 @@ layout: default
   <div class="slogan">
     <h1 class="mb-3">Intermodal Travel Information</h1>
     <h2>
-      Real Time Routing including Trains, Buses, Trams, Planes, Bike Sharing, Ride Sharing, and
-        many more
+      Real Time Routing including Trains, Buses, Trams, Planes, Bike Sharing,
+      Ride Sharing, and
+      many more
     </h2>
   </div>
 </div>
@@ -16,56 +17,125 @@ layout: default
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Multi Criteria Optimization</h5>
-        <p class="card-text">Das seit der Jahrtausendwende an der TU Darmstadt entwickelte Fahrplanauskunftssystem MOTIS
-          wurde von Anfang an mit dem Gedanken an mehrere Zielkriterien entworfen. So sind z.B. die schnellste
-          Verbindung, die mit den wenigsten Umsteigen und eine Kombination (etwas langsamer als die schnellste, dafür
-          einen Umstieg weniger) alle im multi-kriteriellen Sinne optimal. Ähnliche Verbindungen werden abhängig von
-          ihrem zeitlichen Abstand angeboten.</p>
+        <p class="card-text">
+          The algorithms behind MOTIS inherently support multicriteria Pareto
+          optimization. When traveling, the fastest connection is not always the
+          most desirable one: a connection that saves one or more transfers but
+          takes a few minutes longer might be worthwhile, too. Therefore, MOTIS
+          is capable of computing all optimal trade-offs.
+        </p>
+      </div>
+      <div class="card-footer text-right">
+        <small class="text-muted">
+          <a href="{% link features/routing.html %}">Read more ...</a>
+        </small>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Personalized Routing for Pedestrians</h5>
+        <p class="card-text">
+          Based on OpenStreetMap data, the Per Pedes Routing project which was
+          funded by the German Federal Ministry of Transport and Digital
+          Infrastructure (<a
+            href="https://www.bmvi.de/SharedDocs/DE/Artikel/DG/mfund-projekte/per-pedes-routing.html">mFUND
+            project</a>) provides personalized foot routing in MOTIS. This
+          addresses particulary the needs of mobility-impaired persons including
+          those with heavy luggage or a baby buggy who would like to avoid
+          obstacles like stairs if the detour is acceptable. Here, the
+          multicriteria approach is used to compute all optimal trade-offs
+          between short and convenient routes.
+        </p>
+      </div>
+      <div class="card-footer text-right">
+        <small class="text-muted">
+          <a href="https://github.com/motis-project/ppr">GitHub Link</a>
+        </small>
       </div>
     </div>
 
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Real-Time</h5>
-        <p class="card-text">Das Fahrplanmodell kann durch die Einarbeitung von Echtzeitinformationen aktualisiert
-          werden. Auf diese Weise können Verbindungen in Echtzeit überwacht werden. Bei Problemen können gültige
-          Alternativen ermittelt werden.</p>
+        <p class="card-text">
+          The data model of MOTIS can be updated according to real-time
+          information (delays, cancellations, reroutings, additional services,
+          etc.). This way, it is capable of computing optimal connections that
+          work in case of service disturbances. MOTIS provides real-time journey
+          monitoring and informs the user in case of problems with their journey
+          (i.e. via App). Real-time data can be consumed in the standardized
+          GTFS-RT format.
+        </p>
+      </div>
+      <div class="card-footer text-right">
+        <small class="text-muted">
+          <a href="{% link features/realtime.html %}">Read more ...</a>
+        </small>
       </div>
     </div>
 
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">RailViz</h5>
-        <p class="card-text">Das Fahrplanmodell kann durch die Einarbeitung von Echtzeitinformationen aktualisiert
-          werden. Auf diese Weise können Verbindungen in Echtzeit überwacht werden. Bei Problemen können gültige
-          Alternativen ermittelt werden.</p>
+        <h5 class="card-title">Web and App</h5>
+        <p class="card-text">
+          To demostrate the API, MOTIS provides a <a
+            href="https://demo.motis-project.de">web application</a> and an <a
+            href="https://play.google.com/store/apps/details?id=de.motis_project.app2">Android
+            app</a>. Both provide capabilities for intermodal real-time routing.
+          Everything is <a href="https://github.com/motis-project/motis/ui">open
+            source</a> as well and can be hacked on!
+        </p>
+        <p class="card-text font-italic">Note: currently, not all features
+          provided by the backend are available in the user interface.</p>
+      </div>
+      <div class="card-footer text-right">
+        <small class="text-muted">
+          <a class="mr-2"
+            href="https://github.com/motis-project/motis/ui">GitHub Link</a>
+          <a class="mr-2" href="https://demo.motis-project.de">Web Demo</a>
+          <a
+            href="https://play.google.com/store/apps/details?id=de.motis_project.app2">Android
+            App</a>
+        </small>
       </div>
     </div>
 
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">OnTrip / PreTrip</h5>
-        <p class="card-text">Nicht nur die klassische Planung einer Reise im Vorfeld, also PreTrip wird unterstützt.
-          Möchte man nach einem Termin sofort die Reise beginnen, ist es sinnvoll die Wartezeit bis zur Abfahrt in die
-          Reisezeit einzubeziehen. In diesem OnTrip Szenario nutzt einem eine dreißig Minuten spätere Verbindung, die
-          zehn Minuten schneller ist, leider nichts; man kommt immer noch zwanzig Minuten später an.</p>
+        <h5 class="card-title">API</h5>
+        <p class="card-text">All functionalities are available via a <a
+            href="https://google.github.io/flatbuffers/">Flatbuffers</a> / JSON
+          API. MOTIS itself is structured into modules which use the same
+          protocol as the external clients (such as the Android app and web
+          application). MOTIS provides batch files for evaluations with a large
+          number of queries as well as JSON via HTTP or WebSocket when MOTIS is
+          operated as a server.</p>
       </div>
-    </div>
-
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">JSON API</h5>
-        <p class="card-text">Sämtliche Funktionalitäten werden als JSON Schnittstelle angeboten.</p>
+      <div class="card-footer text-right">
+        <small class="text-muted">
+          <a href="{% link api/index.html %}">Read more ...</a>
+        </small>
       </div>
     </div>
 
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Intermodal</h5>
-        <p class="card-text">Mit dem fahrplangebundenen ÖV als Rückgrat der Tür-zu-Tür-Auskunft ist es möglich,
-          Teilstrecken zu Fuß, mit dem Fahrrad, mit dem eigenen Auto, Taxi, Leihrad, Mitfahrzentrale etc. zurückzulegen.
-          Das Auskunftssystem ermittelt wieder im multi-kriteriellen Sinne attraktive Verbindungen, die den Nutzer von
-          der Start- zur Zieladresse bringen.</p>
+        <p class="card-text">
+          MOTIS supports arbitrary transport modes such as public transport,
+          walking, driving by car (own car, taxi, etc.), ride sharing, bike
+          sharing or flights. At the core of MOTIS is a powerful
+          state-of-the-art public transport data model and routing algorithm.
+          All other
+          transport modes can be addressed in a modular way without sacrificing
+          optimality.
+        </p>
+      </div>
+      <div class="card-footer text-right">
+        <small class="text-muted">
+          <a href="{% link features/routing.html %}">Read more ...</a>
+        </small>
       </div>
     </div>
   </div>
