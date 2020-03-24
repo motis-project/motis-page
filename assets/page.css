@@ -142,8 +142,9 @@ a {
 
 @media (min-width: 1024px) {
   .slogan {
-    left: 57%;
-    width: 42%;
+    text-shadow: white 0px 0px 4px;
+    left: 54%;
+    width: 41%;
   }
   .map {
     border: solid 20em rgba(#000, .2);
