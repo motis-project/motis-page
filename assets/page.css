@@ -38,6 +38,7 @@ body {
 .card-footer {
   background-color: transparent;
   border-top: none;
+  padding: 0.25rem 1.25rem .75rem 1.25rem;
 }
 
 .card {
