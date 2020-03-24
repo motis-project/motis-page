@@ -1,17 +1,26 @@
-<header class="masthead m-2 pb-3 mb-auto d-flex flex-wrap justify-content-center align-content-center">
-  <img src="{{ "/assets/motis1.svg" | relative_url }}" width="96" />
-  <h1 class="pl-sm-2 mt-auto mb-auto"><a href="{% link index.html %}">MOTIS Project</a></h1>
-  
+<header
+  class="masthead m-2 pb-3 mb-auto d-flex flex-wrap justify-content-center align-content-center">
+  <img src="{{ "/assets/motis1.svg" | relative_url }}" width="96" height="96" />
+  <h1 class="pl-sm-2 mt-auto mb-auto"><a href="{% link index.html %}">MOTIS
+      Project</a></h1>
 
-  <nav class="nav nav-masthead ml-sm-auto d-flex align-content-center flex-wrap">
-    <a class="nav-link {% if '/' == page.url %}active{% endif %}" href="{% link index.html %}">About</a>
-    <a class="nav-link {% if '/api/' == page.url %}active{% endif %}" href="{% link api/index.html %}">API</a>
-    <a class="nav-link" href="https://demo.motis-project.de" target="_blank">Demo</a>
-    <a class="nav-link {% if '/install.html' == page.url %}active{% endif %}" href="{% link install.html %}">Install</a>
+
+  <nav
+    class="nav nav-masthead ml-sm-auto d-flex align-content-center flex-wrap">
+    <a class="nav-link {% if '/' == page.url %}active{% endif %}"
+      href="{% link index.html %}">About</a>
+    <a class="nav-link {% if '/api/' == page.url %}active{% endif %}"
+      href="{% link api/index.html %}">API</a>
+    <a class="nav-link" href="https://demo.motis-project.de"
+      target="_blank">Demo</a>
+    <a class="nav-link {% if '/install.html' == page.url %}active{% endif %}"
+      href="{% link install.html %}">Install</a>
   </nav>
 
-  <a class="github mt-3 mt-sm-auto mb-sm-auto ml-sm-5" href="https://github.com/motis-project/motis">
+  <a class="github mt-3 mt-sm-auto mb-sm-auto ml-sm-5"
+    href="https://github.com/motis-project/motis">
     Open Source
-    <img class="ml-1 p-1" src="{{ "/assets/github.svg" | relative_url }}" alt="" width="32" height="32" />
+    <img class="ml-1 p-1" src="{{ "/assets/github.svg" | relative_url }}" alt=""
+      width="32" height="32" />
   </a>
 </header>
