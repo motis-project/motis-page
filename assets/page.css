@@ -158,7 +158,6 @@ a {
     width: 41%;
   }
   .map {
-    border: solid 20em rgba(#000, .2);
     background: url('/assets/map.png');
     height: 520px;
     width: 70%;
