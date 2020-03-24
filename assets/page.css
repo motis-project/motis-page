@@ -35,6 +35,10 @@ body {
   background-color: #F3F3F3;
 }
 
+* {
+  hyphens: auto;
+}
+
 .cover-container {
   max-width: 96rem;
   min-height: 100vh;
@@ -115,20 +119,6 @@ body {
 .cover .btn-lg {
   padding: .75rem 1.25rem;
   font-weight: 700;
-}
-
-
-.badge-primary,.btn-primary {
-  background-color: #1089ff;
-}
-.nav-pills .nav-item.show .nav-link, .nav-pills .nav-link.active {
-  background-color: #1089ff;
-}
-a {
-  color: #1089ff;
-}
-.bar {
-  background: #1089ff;
 }
 
 .slogan {
