@@ -12,17 +12,21 @@ layout: default
   </div>
 </div>
 
-<div class="row marketing">
-  <div class="card-columns">
-    <div class="card">
+<div class="marketing row row-cols-3">
+
+  <div class="col-lg-4 mb-4">
+    <div class="card h-100">
       <div class="card-body">
         <h5 class="card-title">Multi Criteria Optimization</h5>
         <p class="card-text">
           The algorithms behind MOTIS inherently support multicriteria Pareto
           optimization. When traveling, the fastest connection is not always the
-          most desirable one: a connection that saves one or more transfers but
+          most desirable one for every traveler: a connection that saves one or
+          more transfers but
           takes a few minutes longer might be worthwhile, too. Therefore, MOTIS
-          is capable of computing all optimal trade-offs.
+          is capable of computing all optimal trade-offs. All approaches
+          implemented in MOTIS are state-of-the-art and guarantee optimality of
+          the results.
         </p>
       </div>
       <div class="card-footer text-right">
@@ -31,8 +35,10 @@ layout: default
         </small>
       </div>
     </div>
+  </div>
 
-    <div class="card">
+  <div class="col-lg-4 mb-4">
+    <div class="card h-100">
       <div class="card-body">
         <h5 class="card-title">Personalized Routing for Pedestrians</h5>
         <p class="card-text">
@@ -43,9 +49,7 @@ layout: default
             project</a>) provides personalized foot routing in MOTIS. This
           addresses particulary the needs of mobility-impaired persons including
           those with heavy luggage or a baby buggy who would like to avoid
-          obstacles like stairs if the detour is acceptable. Here, the
-          multicriteria approach is used to compute all optimal trade-offs
-          between short and convenient routes.
+          obstacles like stairs if the detour is acceptable.
         </p>
       </div>
       <div class="card-footer text-right">
@@ -54,8 +58,10 @@ layout: default
         </small>
       </div>
     </div>
+  </div>
 
-    <div class="card">
+  <div class="col-lg-4 mb-4">
+    <div class="card h-100">
       <div class="card-body">
         <h5 class="card-title">Real-Time</h5>
         <p class="card-text">
@@ -74,8 +80,10 @@ layout: default
         </small>
       </div>
     </div>
+  </div>
 
-    <div class="card">
+  <div class="col-lg-4 mb-4">
+    <div class="card h-100">
       <div class="card-body">
         <h5 class="card-title">Web and App</h5>
         <p class="card-text">
@@ -92,7 +100,8 @@ layout: default
       <div class="card-footer text-right">
         <small class="text-muted">
           <a class="mr-2"
-            href="https://github.com/motis-project/motis/ui">GitHub Link</a>
+            href="https://github.com/motis-project/motis/ui">GitHub
+            Link</a>
           <a class="mr-2" href="https://demo.motis-project.de">Web Demo</a>
           <a
             href="https://play.google.com/store/apps/details?id=de.motis_project.app2">Android
@@ -100,16 +109,21 @@ layout: default
         </small>
       </div>
     </div>
+  </div>
 
-    <div class="card">
+  <div class="col-lg-4 mb-4">
+    <div class="card h-100">
       <div class="card-body">
         <h5 class="card-title">API</h5>
         <p class="card-text">All functionalities are available via a <a
-            href="https://google.github.io/flatbuffers/">Flatbuffers</a> / JSON
+            href="https://google.github.io/flatbuffers/">Flatbuffers</a> /
+          JSON
           API. MOTIS itself is structured into modules which use the same
           protocol as the external clients (such as the Android app and web
-          application). MOTIS provides batch files for evaluations with a large
-          number of queries as well as JSON via HTTP or WebSocket when MOTIS is
+          application). MOTIS provides batch files for evaluations with a
+          large
+          number of queries as well as JSON via HTTP or WebSocket when MOTIS
+          is
           operated as a server.</p>
       </div>
       <div class="card-footer text-right">
@@ -118,8 +132,11 @@ layout: default
         </small>
       </div>
     </div>
+  </div>
 
-    <div class="card">
+
+  <div class="col-lg-4 mb-4">
+    <div class="card h-100">
       <div class="card-body">
         <h5 class="card-title">Intermodal</h5>
         <p class="card-text">
@@ -128,7 +145,8 @@ layout: default
           sharing or flights. At the core of MOTIS is a powerful
           state-of-the-art public transport data model and routing algorithm.
           All other
-          transport modes can be addressed in a modular way without sacrificing
+          transport modes can be addressed in a modular way without
+          sacrificing
           optimality.
         </p>
       </div>
@@ -139,4 +157,5 @@ layout: default
       </div>
     </div>
   </div>
+
 </div>
