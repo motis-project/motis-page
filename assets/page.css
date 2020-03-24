@@ -42,9 +42,23 @@ body {
 
 .card {
   border: none;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
 }
+
+.badge-primary,.btn-primary {
+  background-color: #db218a;
+}
+.nav-pills .nav-item.show .nav-link, .nav-pills .nav-link.active {
+  background-color: #db218a;
+}
+a {
+  color: #db218a;
+}
+.bar {
+  background: #db218a;
+}
+
 
 * {
   hyphens: auto;
