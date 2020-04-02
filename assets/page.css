@@ -48,16 +48,16 @@ body {
 }
 
 .badge-primary,.btn-primary {
-  background-color: #db218a;
+  background-color: rgba(255, 30, 86, 1);
 }
 .nav-pills .nav-item.show .nav-link, .nav-pills .nav-link.active {
-  background-color: #db218a;
+  background-color: rgba(255, 30, 86, 1);
 }
 a {
-  color: #db218a;
+  color: rgba(255, 30, 86, 1);
 }
 .bar {
-  background: #db218a;
+  background: rgba(255, 30, 86, 1);
 }
 
 
