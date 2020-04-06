@@ -34,29 +34,39 @@ This is the intermodal routing API. Intermodal here means that start as well as 
 
 Start defines the entry point from where to start the search. If the search direction `search_dir` is set to `Forward`, this the beginning of the journey (departure). However, if `search_dir` is set to `Backward`, this is the end of the journey (arrival) because then, the algorithm searches starting from the arrival station / location.
 
-### IntermodalOntripStart
+  - ##### <span class="param">start_type</span> required
+    The type of the struct of the `start` entry.
+    - [`IntermodalOntripStart`](#intermodal-ontrip-start): single departure/arrival (depending on `search_dir`) time with start coordinates.
+    - [`IntermodalPretripStart`](#intermodal-pretrip-start): departure/arrival (depending on `search_dir`) time interval with start coordinates
+    - [`PretripStart`](#pretrip-start): departure/arrival (depending on `search_dir`) time interval with start station
+    - [`OntripStationStart`](#ontrip-station-start): single departure/arrival (depending on `search_dir`) time with station
+    - [`OntripTrainStart`](#ontrip-train-start): specifies the train the user is currently in. Time and location are determined automatically.
 
-Pretrip journey planning involves searching in a time interval. Therefore, the Pareto optimization criteria are not travel time and number of transfes but "later departure", "earlier arrival" and number of transfers. This means that the result set may contain a longer journey with more transfers if its departure is later or its arrival is earlier.
+### Intermodal Ontrip Start
 
-  - ##### <span class="param">station</span> required
-    The departure station for `search_dir=Forward` or arrival station for `search_dir=Backward`. See [InputStation]({% link api/buildingblocks.md %}#InputStation)
-  - ##### <span class="param">SearchDir</span> optional, default is `Forward`
-     The search direction.
-       - `Forward`
-       - `Backward`
+For "ontrip" queries, the travel time is the time between the given `departure_time` (which is actually the arrival time when `search_dir` is set to `Forward`) and the departure/arrival at the search destination.
+
+  - ##### <span class="param">position</span> required
+    The departure coordinates for `search_dir=Forward` or arrival coordinates for `search_dir=Backward`. See [Position]({% link api/buildingblocks.md %}#Position).
+  - ##### <span class="param">departure_time</span> required
+    The time to start the search at. The search does only consider arrivals before (if `search_dir` is `Backward`) or departures after (if `search_dir` is `Forward`) this point in time. Times in MOTIS are given as Unix timestamp (seconds since 01.01.1970).
 
 
-## IntermodalOntripStart
+### Intermodal PreTrip Start
 
-  - ##### <span class="param">SearchType</span> optional, default is `Default`
-     The optimization criteria to consider.
-       - `Default`
-       - `SingleCriterion`
-       - `SingleCriterionNoIntercity`
-  - ##### <span class="param">SearchDir</span> optional, default is `Forward`
-     The search direction.
-       - `Forward`
-       - `Backward`
+Pretrip journey planning considers all departures/arrivals in a time interval (depending on the `search_dir`). Therefore, the Pareto optimization criteria are not travel time and number of transfers but "later departure", "earlier arrival" and number of transfers. This means that the result set may contain a longer journey with more transfers if its departure is later or its arrival is earlier.
+
+If a client application wants provides the functionality to scroll through connections (search for earlier or later connections when the user requests this) it should use the `extend_interval_earlier` and `extend_interval_later`. The basic procedure would look like this:Remember the `interval_begin` and `interval_end` attributes from the response.
+
+  - At the first request, set `min_connection_count` to a low number grater then zero (for example 3). Set `extend_interval_earlier` as well as `extend_interval_later` to true.
+  -
+
+  - ##### <span class="param">position</span> required
+    The departure coordinates for `search_dir=Forward` or arrival coordinates for `search_dir=Backward`. See [Position]({% link api/buildingblocks.md %}#Position).
+  - ##### <span class="param">interval</span> required
+  - ##### <span class="param">min_connection_count</span> optional, default is `0`
+  - ##### <span class="param">extend_interval_earlier</span> optional, default is `false`
+  - ##### <span class="param">extend_interval_later</span> optional, default is `false`
 
 
 ## Destination

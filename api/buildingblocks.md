@@ -10,3 +10,13 @@ A input station is a station from user input. If the user used the auto-completi
     The station ID if available.
   - ##### <span class="param">name</span> optional if `id` is set
     The station name if no ID is available.
+
+
+## Position
+
+A geographic coordinate.
+
+  - ##### <span class="param">lat</span> type `double`
+  Latitude (north-south position)
+  - ##### <span class="param">lng</span> type `double`
+  Longitude (east-west position)

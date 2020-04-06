@@ -35,7 +35,7 @@ layout: default
     </ul>
   </div>
 
-  <div class="col-xl pr-xl-5 pl-xl-5 api-content">
+  <div class="col-xl pr-xl-5 pl-xl-5 pb-5 api-content">
     {{ content }}
   </div>
 
@@ -108,9 +108,9 @@ layout: default
     });
     CodeMirror.commands.foldAll(cm);
     // CodeMirror.commands.unfold(cm, 1);
-    cm.operation(function() { 
-      for (var l = cm.firstLine(); l <= cm.lastLine(); ++l) 
-        cm.foldCode({line: l, ch: 0}, null, "unfold"); 
+    cm.operation(function() {
+      for (var l = cm.firstLine(); l <= cm.lastLine(); ++l)
+        cm.foldCode({line: l, ch: 0}, null, "unfold");
     });
   }
 </script>

@@ -11,6 +11,14 @@ The MOTIS HTTP endpoint is *not* a REST endpoint: everything goes through a HTTP
 
 All major general purpose programming languages (Java, C#, Python, C/C++, etc.) can consume the MOTIS HTTP JSON API. It is recommended to use a HTTP client and JSON parser library.
 
+## Skipped Attributes
+
+If an attribute has its default value it is skipped. This is important for integer and double values as well as for enums. Thus, clients should not depend on the existence of keys in the JSON response but rather assume the default value (zero / first enum entry) if a key is missing.
+
+
+## Times
+
+Every timestamp, in requests as well as in responses is given as Unix timestamp. It is the number of seconds that have elapsed since the Unix epoch, that is the time 00:00:00 UTC on 1 January 1970, minus leap seconds. Most programming languages have functions to deal with this time format.
 
 ## Message Format
 
