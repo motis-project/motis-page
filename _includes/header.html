@@ -1,6 +1,8 @@
 <header
-  class="masthead m-2 pb-3 mb-auto d-flex flex-wrap justify-content-center align-content-center">
-  <img src="{{ "/assets/motis2.svg" | relative_url }}" width="96" height="96" />
+  class="masthead m-2 pb-3 mb-2 d-flex flex-wrap justify-content-center align-content-center">
+  <a href="{% link index.html %}">
+    <img src="{{ "/assets/motis2.svg" | relative_url }}" width="96" height="96" />
+  </a>
   <h1 class="pl-sm-2 mt-auto mb-auto"><a href="{% link index.html %}">MOTIS
       Project</a></h1>
 
@@ -10,7 +12,7 @@
     <a class="nav-link {% if '/' == page.url %}active{% endif %}"
       href="{% link index.html %}">About</a>
     <a class="nav-link {% if '/api/' == page.url %}active{% endif %}"
-      href="{% link api/index.html %}">API</a>
+      href="{% link api/index.md %}">API</a>
     <a class="nav-link" href="https://demo.motis-project.de/public/"
       target="_blank">Demo</a>
     <a class="nav-link {% if '/install.html' == page.url %}active{% endif %}"

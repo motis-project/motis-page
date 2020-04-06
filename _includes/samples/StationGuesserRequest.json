@@ -1,0 +1,13 @@
+curl -d "{
+  \"destination\": {
+    \"type\": \"Module\",
+    \"target\": \"/guesser\"
+  },
+  \"content_type\": \"StationGuesserRequest\",
+  \"content\": {
+    \"input\": \"Zuri\",
+    \"guess_count\": 10
+  }
+}" -X POST \
+   -H "Content-Type: application/json" \
+   https://demo.motis-project.de/public/
