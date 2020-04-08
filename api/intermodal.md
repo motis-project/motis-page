@@ -14,6 +14,8 @@ This is the intermodal routing API. Intermodal here means that start as well as 
     See [Start](#start).
   - ##### <span class="param">start_modes</span> required
     The transport modes allowed at the start. See [Modes](#modes).
+  - ##### <span class="param">destination_type</span> required
+    Specifies the type of the `destination` parameter. See [Destination](#destination).
   - ##### <span class="param">destination</span> required
     See [Destination](#destination).
   - ##### <span class="param">destination_modes</span> required
@@ -42,51 +44,116 @@ Start defines the entry point from where to start the search. If the search dire
     - [`OntripStationStart`](#ontrip-station-start): single departure/arrival (depending on `search_dir`) time with station
     - [`OntripTrainStart`](#ontrip-train-start): specifies the train the user is currently in. Time and location are determined automatically.
 
+
 ### Intermodal Ontrip Start
 
 For "ontrip" queries, the travel time is the time between the given `departure_time` (which is actually the arrival time when `search_dir` is set to `Forward`) and the departure/arrival at the search destination.
 
   - ##### <span class="param">position</span> required
-    The departure coordinates for `search_dir=Forward` or arrival coordinates for `search_dir=Backward`. See [Position]({% link api/buildingblocks.md %}#Position).
+    The departure coordinates for `search_dir=Forward` or arrival coordinates for `search_dir=Backward`. See [Position]({% link api/buildingblocks.md %}#position).
   - ##### <span class="param">departure_time</span> required
-    The time to start the search at. The search does only consider arrivals before (if `search_dir` is `Backward`) or departures after (if `search_dir` is `Forward`) this point in time. Times in MOTIS are given as Unix timestamp (seconds since 01.01.1970).
+    The time to start the search at. The search does only consider arrivals before (if `search_dir` is `Backward`) or departures after (if `search_dir` is `Forward`) this point in time. See [Times]({% link api/index.md %}#times).
+
+
+### OnTrip Train Start
+
+This start type is useful if the user is currently in a train. The search algorithm first locates the train and considers all feasible options: at each next stop, the user can either stay in the train or alight. After alighting, the user can either be at their destination, change to another train or walk to another station. Note that the [OnTrip Station Start](#ontrip-station-start) has not the same effect as it will not count the transfer time to other trains.
+
+  - ##### <span class="param">trip</span> required
+    The trip to search from. See [Trip ID]({% link api/buildingblocks.md %}#trip-id).
+  - ##### <span class="param">station</span> required
+    The trip to search from. See [Input Station]({% link api/buildingblocks.md %}#input-station).
+  - ##### <span class="param">arrival_time</span> required
+    The trip to search from. See [Times]({% link api/index.md %}#times).
 
 
 ### Intermodal PreTrip Start
 
 Pretrip journey planning considers all departures/arrivals in a time interval (depending on the `search_dir`). Therefore, the Pareto optimization criteria are not travel time and number of transfers but "later departure", "earlier arrival" and number of transfers. This means that the result set may contain a longer journey with more transfers if its departure is later or its arrival is earlier.
 
-If a client application wants provides the functionality to scroll through connections (search for earlier or later connections when the user requests this) it should use the `extend_interval_earlier` and `extend_interval_later`. The basic procedure would look like this:Remember the `interval_begin` and `interval_end` attributes from the response.
+Note that this API does not return journeys that are superseded by journeys arriving (`search_dir=Forward`) or departing (`search_dir=Backward`) outside of the interval. This way, the union of journey Pareto-sets with disjunct search intervals are still Pareto-sets where every connection stays optimal. This property is important to deliver coherent results for the "search earlier" and "search later" functionality in a user interface.
 
-  - At the first request, set `min_connection_count` to a low number grater then zero (for example 3). Set `extend_interval_earlier` as well as `extend_interval_later` to true.
-  -
+If a client application provides the functionality to scroll through connections (search for earlier or later connections) it is recommended to use the `extend_interval_earlier` and `extend_interval_later` parameters: since the search backend of MOTIS is stateless, it is the task of the client to keep track bounds of the interval that has been considered. Therefore, it is important to store the `interval_begin` and `interval_end` attributes from the routing response. For the first request, set `extend_interval_earlier` as well as `extend_interval_later` to true. For subsequent requests set `extend_interval_earlier` if searching for earlier connections and `extend_interval_later` for later connections.
 
   - ##### <span class="param">position</span> required
     The departure coordinates for `search_dir=Forward` or arrival coordinates for `search_dir=Backward`. See [Position]({% link api/buildingblocks.md %}#Position).
   - ##### <span class="param">interval</span> required
-  - ##### <span class="param">min_connection_count</span> optional, default is `0`
-  - ##### <span class="param">extend_interval_earlier</span> optional, default is `false`
-  - ##### <span class="param">extend_interval_later</span> optional, default is `false`
+    The (initial) time interval to consider to depart / arrive. This time interval may be extended by the search algorithm if the `min_connection_count` cannot be reached with non-Pareto-dominated connections departing/arriving within the interval. See [Interval]({% link api/buildingblocks.md %}#interval).
+  - ##### <span class="param">min_connection_count</span> optional `integer`, default is `0`
+    This requires interval extension to be enabled. Thus, `extend_interval_earlier || extend_interval_later` needs to be `true`. Otherwise, `min_connection_count` does not have an effect. The search extends the interval in the specified direction until there are `min_connection_count` Pateto-optimal connections in the result set. *Note*: if there are less than `min_connection_count` journeys in the result set, this means that the interval bounds have been reached. If the interval has been extended, the response contains the new bounds.
+  - ##### <span class="param">extend_interval_earlier</span> optional `boolean`, default is `false`
+    Extend the interval to search for earlier connections until `min_connection_count` is reached.
+  - ##### <span class="param">extend_interval_later</span> optional `boolean`, default is `false`
+    Extend the interval to search for later connections until `min_connection_count` is reached.
+
+
+### PreTrip Start
+
+This start type is similar to the [Intermodal PreTrip Start](#intermodal-pretrip-start). The only difference is that the `position` is a `station` here. So for this start type, the search is restricted to start from this station.
+
+The search will only consider footpaths from the timetable data (HAFAS Rohdaten or GTFS). In contrast to the [Intermodal PreTrip Start](#intermodal-pretrip-start), equivalent stations (see HAFAS Rohdaten documentation "Meta Station") are considered as start stations, too.
+
+  - ##### <span class="param">station</span> required
+    Maximal duration to walk in minutes.
+  - ##### <span class="param">interval</span> required
+    See corresponding parameter in [Intermodal PreTrip Start](#intermodal-pretrip-start).
+  - ##### <span class="param">min_connection_count</span> optional `integer`, default is `0`
+    See corresponding parameter in [Intermodal PreTrip Start](#intermodal-pretrip-start).
+  - ##### <span class="param">extend_interval_earlier</span> optional `boolean`, default is `false`
+    See corresponding parameter in [Intermodal PreTrip Start](#intermodal-pretrip-start).
+  - ##### <span class="param">extend_interval_later</span> optional `boolean`, default is `false`
+    See corresponding parameter in [Intermodal PreTrip Start](#intermodal-pretrip-start).
 
 
 ## Destination
 
-Start defines the entry point from where to start the search. If the search direction `search_dir` is set to `Forward`, this the beginning of the journey (departure). However, if `search_dir` is set to `Backward`, the is the end of the journey (arrival) because then, the algorithm searches starting from the arrival station / location.
+If the search direction `search_dir` is set to `Forward`, this the end of the journey (arrival). However, if `search_dir` is set to `Backward`, the is the begin of the journey (departure) because then, the algorithm searches starting from the arrival station / location.
 
-
-### IntermodalPretripStart
-
-  - ##### <span class="param">SearchType</span> optional, default is `Default`
-     The optimization criteria to consider.
-       - `Default`
-       - `SingleCriterion`
-  - ##### <span class="param">SearchDir</span> optional, default is `Forward`
-     The search direction.
-       - `Forward`
-       - `Backward`
-
-
-### IntermodalOntripStart
+  - ##### <span class="param">destination_type</span> required
+    The type of the struct of the `destination` entry.
+    - `InputStation`: `destination` is an [Input Station]({% link api/buildingblocks.md %}#input-station)
+    - `InputPosition`: `destination` is an [Position]({% link api/buildingblocks.md %}#position)
 
 
 ## Modes
+
+The `start_modes` and `destination_modes` lists determine which transport modes are used in conjunction with Intermodal [OnTrip Start](#intermodal-ontrip-start), [Intermodal PreTrip Start](#intermodal-pretrip-start) and [`InputPosition` destination type](#destination). If a station is specified as start / destination, the modes have no effect and should be left empty.
+
+Both, `start_modes` and `destination_modes` are arrays that contain the following data structures:
+
+  - ##### <span class="param">mode_type</span> required
+    - [`Foot`](#foot): walking within a specified duration
+    - [`Bike`](#bike): riding a bicyle within a specified duration
+    - [`Car`](#car): driving a case within a specified duration
+    - [`FootPPR`](#foot-ppr): walking within a specified duration (with profile parameter)
+    - [`CarParking`](#car-parking): like car but uses a parking place near the station
+  - ##### <span class="param">mode</span> required
+    See blow.
+
+
+### Foot
+
+  - ##### <span class="param">duration</span> required
+    Maximal duration to walk in minutes.
+
+### Bike
+
+  - ##### <span class="param">duration</span> required
+    Maximal duration to ride in minutes.
+
+### Car
+
+  - ##### <span class="param">duration</span> required
+    Maximal duration to drive in minutes.
+
+### Foot PPR
+
+  - ##### <span class="param">profile</span> required
+    See [PPR Search Profile]({% link api/buildingblocks.md %}#ppr-search-profile).
+
+### Car Parking
+
+  - ##### <span class="param">max_car_duration</span> required, type `integer`
+    Maximal duration to drive in minutes.
+  - ##### <span class="param">ppr_search_options</span> required
+    Used for the section from the parking place to the station. See [PPR Search Profile]({% link api/buildingblocks.md %}#ppr-search-profile).

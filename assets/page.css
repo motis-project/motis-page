@@ -12,6 +12,10 @@
   hyphens: auto;
 }
 
+code, pre {
+  hyphens: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", "Ubuntu", sans-serif;
   font-weight: 500;
