@@ -11,6 +11,7 @@ layout: default
       <li><a href="{% link api/buildingblocks.md %}#interval">Interval</a></li>
       <li><a href="{% link api/buildingblocks.md %}#trip-id">Trip ID</a></li>
       <li><a href="{% link api/buildingblocks.md %}#ppr-search-profile">PPR Search Profile</a></li>
+      <li><a href="{% link api/connection.md %}">Connection</a></li>
     </ul>
 
     <h5 class="mt-xl-5">API Endpoints</h5>
@@ -39,10 +40,25 @@ layout: default
       </div>
       <div class="code-example-body code-example-query">
         <!--<noscript>-->
-          {% highlight bash %}{% include {{ page.example }} %}{% endhighlight %}
+          {% highlight json %}{% include {{ page.example }} %}{% endhighlight %}
           <!--
         </noscript>
         <textarea class="example-code">{% include  {{ page.example }} %}</textarea>-->
+      </div>
+    </div>
+    {% endif %}
+
+    {% if page.shellexample %}
+    <div class="code-example mt-4">
+      <div class="code-example-head">
+        example
+      </div>
+      <div class="code-example-body code-example-query">
+        <!--<noscript>-->
+          {% highlight bash %}{% include {{ page.shellexample }} %}{% endhighlight %}
+          <!--
+        </noscript>
+        <textarea class="example-code">{% include  {{ page.shellexample }} %}</textarea>-->
       </div>
     </div>
     {% endif %}

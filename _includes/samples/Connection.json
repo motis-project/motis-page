@@ -1,0 +1,197 @@
+{
+  "stops": [
+    {
+      "station": {
+        "id": "8591379",
+        "name": "Zürich, Stampfenbachplatz",
+        "pos": {
+          "lat": 47.380292,
+          "lng": 8.542776
+        }
+      },
+      "arrival": {
+        "track": "",
+        "schedule_track": ""
+      },
+      "departure": {
+        "time": 1586006460,
+        "schedule_time": 1586006460,
+        "track": "",
+        "schedule_track": "",
+        "valid": true
+      },
+      "enter": true
+    },
+    {
+      "station": {
+        "id": "8587349",
+        "name": "Zürich, Bahnhofquai/HB",
+        "pos": {
+          "lat": 47.37756,
+          "lng": 8.541741
+        }
+      },
+      "arrival": {
+        "time": 1586006580,
+        "schedule_time": 1586006580,
+        "track": "",
+        "schedule_track": "",
+        "valid": true
+      },
+      "departure": {
+        "time": 1586006580,
+        "schedule_time": 1586006580,
+        "track": "",
+        "schedule_track": "",
+        "valid": true
+      },
+      "exit": true
+    },
+    {
+      "station": {
+        "id": "8503000",
+        "name": "Zürich HB",
+        "pos": {
+          "lat": 47.378177,
+          "lng": 8.540212
+        }
+      },
+      "arrival": {
+        "time": 1586007000,
+        "schedule_time": 1586007000,
+        "track": "",
+        "schedule_track": "",
+        "valid": true
+      },
+      "departure": {
+        "time": 1586007000,
+        "schedule_time": 1586007000,
+        "track": "32",
+        "schedule_track": "32",
+        "valid": true
+      },
+      "enter": true
+    },
+    {
+      "station": {
+        "id": "8500218",
+        "name": "Olten",
+        "pos": {
+          "lat": 47.351935,
+          "lng": 7.907699
+        }
+      },
+      "arrival": {
+        "time": 1586008800,
+        "schedule_time": 1586008800,
+        "track": "3",
+        "schedule_track": "3",
+        "valid": true
+      },
+      "departure": {
+        "track": "",
+        "schedule_track": ""
+      },
+      "exit": true
+    }
+  ],
+  "transports": [
+    {
+      "move_type": "Transport",
+      "move": {
+        "range": {
+          "from": 0,
+          "to": 1
+        },
+        "category_name": "T",
+        "category_id": 2,
+        "clasz": 7,
+        "train_nr": 12083,
+        "line_id": "14",
+        "name": "T 14",
+        "provider": "Verkehrsbetriebe Zürich INFO+",
+        "direction": "Zürich, Triemli                                   "
+      }
+    },
+    {
+      "move_type": "Walk",
+      "move": {
+        "range": {
+          "from": 1,
+          "to": 2
+        },
+        "mumo_id": -1,
+        "mumo_type": ""
+      }
+    },
+    {
+      "move_type": "Transport",
+      "move": {
+        "range": {
+          "from": 2,
+          "to": 3
+        },
+        "category_name": "IC",
+        "category_id": 23,
+        "clasz": 1,
+        "train_nr": 1526,
+        "line_id": "5",
+        "name": "IC 5",
+        "provider": "Schweizerische Bundesbahnen SBB",
+        "direction": "Lausanne"
+      }
+    }
+  ],
+  "trips": [
+    {
+      "range": {
+        "from": 0,
+        "to": 1
+      },
+      "id": {
+        "station_id": "8591354",
+        "train_nr": 12083,
+        "time": 1586005440,
+        "target_station_id": "8503610",
+        "target_time": 1586007660,
+        "line_id": "14"
+      },
+      "debug": "FPLAN:1814564:1814599"
+    },
+    {
+      "range": {
+        "from": 2,
+        "to": 3
+      },
+      "id": {
+        "station_id": "8506302",
+        "train_nr": 1526,
+        "time": 1586002020,
+        "target_station_id": "8501120",
+        "target_time": 1586015100,
+        "line_id": "5"
+      },
+      "debug": "FPLAN:86300:86327"
+    }
+  ],
+  "attributes": [
+    {
+      "range": {
+        "from": 2,
+        "to": 3
+      },
+      "code": "Businesszone in 1. Klasse",
+      "text": "BZ"
+    },
+    {
+      "range": {
+        "from": 2,
+        "to": 3
+      },
+      "code": "Ruhezone in 1. Klasse",
+      "text": "RZ"
+    }
+  ],
+  "free_texts": [],
+  "problems": []
+}

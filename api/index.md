@@ -1,6 +1,6 @@
 ---
 layout: api
-example: samples/StationGuesserRequest.json
+shellexample: samples/StationGuesserRequest.json
 ---
 
 ## General Info about the MOTIS API
