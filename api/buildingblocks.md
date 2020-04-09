@@ -2,14 +2,25 @@
 layout: api
 ---
 
+## Station
+
+Contains information about a station.
+
+  - ##### <span class="param">id</span> type `string`
+    The unique station ID.
+  - ##### <span class="param">name</span> type `string`
+    The human readable station name.
+  - ##### <span class="param">position</span> see [Position](#position)
+    The coordinates where the station is located.
+
 ## Input Station
 
 A input station is a station from user input. If the user used the auto-completion function and the station ID is available, then the `id` field is used to resolve the station. If this is not the case (the user just entered a string), the `name` field is filled with a (possibly incomplete or misspelled) station name. In the latter case, MOTIS will use the first guess from the station auto-complete to resolve the station `id`.
 
-  - ##### <span class="param">id</span> can be empty if `name` is set
-    The station ID if available.
-  - ##### <span class="param">name</span> can be empty if `id` is set
-    The station name if no ID is available.
+  - ##### <span class="param">id</span> type `string`
+    The station ID if available. May be empty if `name` is set.
+  - ##### <span class="param">name</span> type `string`
+    The station name if no ID is available. May be empty if `id` is set.
 
 
 ## Position

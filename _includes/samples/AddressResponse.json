@@ -1,0 +1,53 @@
+{
+  "destination": {
+    "target": ""
+  },
+  "content_type": "AddressResponse",
+  "content": {
+    "guesses": [
+      {
+        "pos": {
+          "lat": 47.377901,
+          "lng": 8.514507
+        },
+        "name": "Agnesstrasse",
+        "type": "street",
+        "regions": [
+          {
+            "name": "Hard",
+            "admin_level": 10
+          },
+          {
+            "name": "Sihlfeld",
+            "admin_level": 10
+          },
+          {
+            "name": "Aussersihl",
+            "admin_level": 9
+          },
+          {
+            "name": "Wiedikon",
+            "admin_level": 9
+          },
+          {
+            "name": "Zürich",
+            "admin_level": 8
+          },
+          {
+            "name": "Bezirk Zürich",
+            "admin_level": 6
+          },
+          {
+            "name": "Zürich",
+            "admin_level": 4
+          },
+          {
+            "name": "Schweiz/Suisse/Svizzera/Svizra",
+            "admin_level": 2
+          }
+        ]
+      }
+    ]
+  },
+  "id": 1
+}

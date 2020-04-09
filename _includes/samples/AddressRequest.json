@@ -1,0 +1,10 @@
+{
+  "destination": {
+    "type": "Module",
+    "target": "/address"
+  },
+  "content_type": "AddressRequest",
+  "content": {
+    "input": "Agnestraße Zur"
+  }
+}
