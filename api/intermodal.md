@@ -157,3 +157,14 @@ Both, `start_modes` and `destination_modes` are arrays that contain the followin
     Maximal duration to drive in minutes.
   - ##### <span class="param">ppr_search_options</span> required
     Used for the section from the parking place to the station. See [PPR Search Profile]({% link api/buildingblocks.md %}#ppr-search-profile).
+
+## Routing Response
+
+The routing response contains all Pareto-optimal connections.
+
+  - ##### <span class="param">connections</span> array of [Connections]({% link api/connection.md %})
+    Array of all optimal connections.
+  - ##### <span class="param">interval_begin</span> type `integer`
+    The interval that was searched. This might differ from the initial interval given in the request if `min_connection_count` was set to a value greater than zero.
+  - ##### <span class="param">interval_end</span> type `integer`
+    The end of the interval that was searched.
