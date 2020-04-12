@@ -13,20 +13,23 @@ To run your own MOTIS instance, you need an OpenStreetMap dataset and a timetabl
 
   - Download the latest OpenStreetMap dataset for Swizerland in the ".osm.pbf" format from [geofabrik.de](https://download.geofabrik.de/europe/switzerland.html) and put it into your `data` folder.
   - Download the latest dataset HAFAS Rohdaten dataset from [opentransportdata.swiss](https://opentransportdata.swiss/en/dataset) and extract it into your `data/hrd` folder.
+
+<!--
   - This step is only required for real-time support: Download the latest GTFS dataset from  [opentransportdata.swiss](https://opentransportdata.swiss/en/dataset) and extract it into your `data/gtfs` folder.
+-->
+
 
 ### Linux Installation Guide
 
 Tested on Ubuntu 18.04.
 
-  - **Step 1**: Download the latest release for your operating system [motis](https://github.com/motis-project/motis/releases/latest/download/motis)
-  - **Step 4**: Start MOTIS:
-    - Windows: `motis.exe`
-    - Linux: `./motis --dataset.path .`
+  - **Step 1**: Download and unzip the latest release: [motis](https://github.com/motis-project/motis/releases/latest/download/motis-linux.zip)
+  - **Step 2**: Start MOTIS with `./motis --dataset.path data/hrd`
 
 
 ### Windows Installation Guide
 
-Tested on Windows 10.
+Start a PowerShell or cmd.exe prompt:
 
-[motis.exe](https://github.com/motis-project/motis/releases/latest/download/motis.exe)
+  - **Step 1**: Download and unzip the latest release: [motis](https://github.com/motis-project/motis/releases/latest/download/motis-windows.zip)
+  - **Step 2**: Start MOTIS with `motis.exe --dataset.path data/hrd`
