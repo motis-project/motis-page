@@ -407,7 +407,7 @@ figure, pre {
 .highlight .sc { color: var(--logo-color-pink) } /* Literal.String.Char */
 .highlight .sd { color: var(--logo-color-pink) } /* Literal.String.Doc */
 .highlight .s2 { color: var(--logo-color-pink) } /* Literal.String.Double */
-.highlight .se { color: var(--logo-color-pink) } /* Literal.String.Escape */
+.highlight .se { } /* Literal.String.Escape */
 .highlight .sh { color: var(--logo-color-pink) } /* Literal.String.Heredoc */
 .highlight .si { color: var(--logo-color-pink) } /* Literal.String.Interpol */
 .highlight .sx { color: var(--logo-color-pink) } /* Literal.String.Other */
