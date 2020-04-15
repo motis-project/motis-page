@@ -60,16 +60,19 @@ body {
 }
 
 .card-footer {
-  background-color: transparent;
+  background: #24292e;
   border-top: none;
-  padding: 0.25rem 1.25rem .75rem 1.25rem;
+  padding: 0.75rem 1.25rem .75rem 1.25rem;
+}
+
+.card-footer a {
+  margin-left: 3em;
+  font-weight: bold;
 }
 
 .card-title {
-  color: white;
   border-radius: 4px;
   text-align: center;
-  background: rgb(38, 35, 78);
 }
 
 .card {
@@ -104,7 +107,7 @@ a {
 .masthead {
   margin-top: 1.8rem;
   margin-bottom: 2rem;
-  background: radial-gradient(circle, rgba(38,35,78,1) 0%, rgba(0,22,57,1) 60%);
+  background: #24292e;
 }
 
 
