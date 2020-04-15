@@ -1,7 +1,6 @@
 ---
 layout: api
-request: samples/GuesserRequest.json
-response: samples/GuesserResponse.json
+code: guesser
 ---
 
 ## Station Autocompletion Based on Timetable Data

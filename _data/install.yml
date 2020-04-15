@@ -1,0 +1,9 @@
+- title: "Install Directory"
+  language: plaintext
+  file: samples/install-directory.txt
+- title: "Windows Preprocess"
+  language: batch
+  file: samples/install-windows.bat
+- title: "Linux Preprocess"
+  language: bash
+  file: samples/install-linux.sh

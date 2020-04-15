@@ -1,7 +1,6 @@
 ---
 layout: api
-request: samples/AddressRequest.json
-response: samples/AddressResponse.json
+code: address
 ---
 
 ## Address Autocompletion Based on OpenStreetMap Data

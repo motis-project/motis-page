@@ -22,13 +22,8 @@ layout: default
     <h5 class="mt-xl-5">API Endpoints</h5>
     <ul>
       <li><a href="{% link docs/api/intermodal.md %}">Intermodal Routing</a></li>
-      <!-- <li><a href="{% link docs/api/routing.md %}">Timetable Routing</a></li> -->
       <li><a href="{% link docs/api/guesser.md %}">Station Autocomplete</a></li>
       <li><a href="{% link docs/api/address.md %}">Address Autocomplete</a></li>
-      <!-- <li><a href="#">Car Routing</a></li> -->
-      <!-- <li><a href="#">Pedestrian Routing</a></li> -->
-      <!-- li><a href="#">Timetable Lookup</a></li> -->
-      <!-- <li><a href="#">Timetable Geo (RailViz)</a></li> -->
     </ul>
   </div>
 
@@ -37,93 +32,27 @@ layout: default
   </div>
 
   <div class="col-xl-5" style="max-width: 32rem;">
-    {% if page.example %}
-    <div class="code-example mt-4">
-      <div class="code-example-head">
-        example
+    {% if page.code %}
+    <ul>
+    {% for c in site.data[page.code] %}
+      <div class="code-example mt-4">
+        <div class="code-example-head">
+          {{ c.title }}
+        </div>
+        <div class="code-example-body code-example-query">
+          {% if c.language == 'bash' %}
+          {% highlight bash %}{% include {{ c.file }} %}{% endhighlight %}
+          {% elsif c.language == 'bat' %}
+          {% highlight batch %}{% include {{ c.file }} %}{% endhighlight %}
+          {% elsif c.language == 'json' %}
+          {% highlight json %}{% include {{ c.file }} %}{% endhighlight %}
+          {% else %}
+          {% highlight plaintext %}{% include {{ c.file }} %}{% endhighlight %}
+          {% endif %}
+        </div>
       </div>
-      <div class="code-example-body code-example-query">
-        <!--<noscript>-->
-          {% highlight json %}{% include {{ page.example }} %}{% endhighlight %}
-          <!--
-        </noscript>
-        <textarea class="example-code">{% include  {{ page.example }} %}</textarea>-->
-      </div>
-    </div>
-    {% endif %}
-
-    {% if page.shellexample %}
-    <div class="code-example mt-4">
-      <div class="code-example-head">
-        example
-      </div>
-      <div class="code-example-body code-example-query">
-        <!--<noscript>-->
-          {% highlight bash %}{% include {{ page.shellexample }} %}{% endhighlight %}
-          <!--
-        </noscript>
-        <textarea class="example-code">{% include  {{ page.shellexample }} %}</textarea>-->
-      </div>
-    </div>
-    {% endif %}
-
-    {% if page.request %}
-    <div class="code-example mt-4">
-      <div class="code-example-head">
-        Request
-      </div>
-      <div class="code-example-body code-example-query">
-        <!--<noscript>-->
-          {% highlight json %}{% include {{ page.request }} %}{% endhighlight %}
-          <!--
-        </noscript>
-        <textarea class="example-code">{% include  {{ page.request }} %}</textarea>-->
-      </div>
-    </div>
-    {% endif %}
-
-    {% if page.response %}
-    <div class="code-example mt-4">
-      <div class="code-example-head">Response</div>
-      <div class="code-example-body code-example-query">
-        <!--<noscript>-->
-          {% highlight json %}{% include {{ page.response }} %}{% endhighlight %}
-          <!--
-        </noscript>
-        <textarea class="example-code">{% include  {{ page.response }} %}</textarea>-->
-      </div>
-    </div>
+    {% endfor %}
+    </ul>
     {% endif %}
   </div>
 </div>
-
-{% if false %}
-<link rel="stylesheet" href=" {{ "/assets/codemirror/codemirror.css" | relative_url }} ">
-<link rel="stylesheet" href=" {{ "/assets/codemirror/foldgutter.css" | relative_url }} ">
-<script src=" {{ "/assets/codemirror/codemirror.js" | relative_url }} "></script>
-<script src=" {{ "/assets/codemirror/foldcode.js" | relative_url }} "></script>
-<script src=" {{ "/assets/codemirror/javascript.js" | relative_url }} "></script>
-<script src=" {{ "/assets/codemirror/foldgutter.js" | relative_url }} "></script>
-<script src=" {{ "/assets/codemirror/brace-fold.js" | relative_url }} "></script>
-<script src=" {{ "/assets/codemirror/comment-fold.js" | relative_url }} "></script>
-<script src=" {{ "/assets/codemirror/indent-fold.js" | relative_url }} "></script>
-<script>
-  var codes = document.getElementsByClassName("example-code");
-  for (var i = 0; i < codes.length; ++i) {
-    var cm = CodeMirror.fromTextArea(codes[i], {
-      lineNumbers: false,
-      mode: { name: "javascript", json: true },
-      lineWrapping: false,
-      foldGutter: true,
-      gutters: ["CodeMirror-foldgutter"],
-      minFoldSize: 2
-    });
-    CodeMirror.commands.foldAll(cm);
-    // CodeMirror.commands.unfold(cm, 1);
-    cm.operation(function() {
-      for (var l = cm.firstLine(); l <= cm.lastLine(); ++l)
-        cm.foldCode({line: l, ch: 0}, null, "unfold");
-    });
-  }
-</script>
-{% endif %}

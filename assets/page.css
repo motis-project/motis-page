@@ -1,9 +1,9 @@
 @font-face{
   font-family: 'JetBrains Mono';
-  src: url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/web/eot/JetBrainsMono-Regular.eot') format('embedded-opentype'),
-       url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/web/woff2/JetBrainsMono-Regular.woff2') format('woff2'),
-       url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/web/woff/JetBrainsMono-Regular.woff') format('woff'),
-       url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+  src: url('jetbrains-mono/JetBrainsMono-Regular.eot') format('embedded-opentype'),
+       url('jetbrains-mono/JetBrainsMono-Regular.woff2') format('woff2'),
+       url('jetbrains-mono/JetBrainsMono-Regular.woff') format('woff'),
+       url('jetbrains-mono/JetBrainsMono-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -274,7 +274,7 @@ a {
 }
 
 .api-content h5 .param {
-  font-family: 'JetBrains Mono';
+  font-family: 'JetBrains Mono', Menlo,Consolas, monospace;
   font-weight: bold;
   color: rgb(33, 37, 41);
 }
@@ -333,7 +333,7 @@ a {
 }
 
 .code-example-body, .code-example-body code, .CodeMirror-code, .CodeMirror-line {
-  font-family: 'JetBrains Mono' !important;
+  font-family: 'JetBrains Mono', Menlo,Consolas, monospace !important;
 }
 
 .CodeMirror-scroll {
@@ -375,7 +375,7 @@ figure, pre {
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { color: #000000; font-weight: bold } /* Keyword */
-.highlight .o { color: #000000; font-weight: bold } /* Operator */
+.highlight .o { color: #000000; } /* Operator */
 .highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
 .highlight .cp { color: #999999; font-weight: bold; font-style: italic } /* Comment.Preproc */
 .highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
@@ -391,7 +391,7 @@ figure, pre {
 .highlight .gu { color: #aaaaaa } /* Generic.Subheading */
 .highlight .gt { color: #aa0000 } /* Generic.Traceback */
 .highlight .kc { color: #219; } /* Keyword.Constant */
-.highlight .kd { color: #000000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kd { color: #000000; } /* Keyword.Declaration */
 .highlight .kn { color: #000000; font-weight: bold } /* Keyword.Namespace */
 .highlight .kp { color: #000000; font-weight: bold } /* Keyword.Pseudo */
 .highlight .kr { color: #000000; font-weight: bold } /* Keyword.Reserved */

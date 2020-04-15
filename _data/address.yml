@@ -1,0 +1,6 @@
+- title: "Address Guesser Request Example"
+  language: json
+  file: samples/AddressRequest.json
+- title: "Address Guesser Response Example"
+  language: json
+  file: samples/AddressResponse.json

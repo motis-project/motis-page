@@ -1,7 +1,6 @@
 ---
 layout: api
-request: samples/IntermodalRequest.json
-response: samples/IntermodalResponse.json
+code: intermodal
 ---
 
 ## Intermodal Routing Request

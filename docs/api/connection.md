@@ -1,6 +1,6 @@
 ---
 layout: api
-example: samples/Connection.json
+code: connection
 ---
 
 ## Connection
