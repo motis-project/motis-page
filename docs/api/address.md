@@ -18,7 +18,7 @@ The address autocomplete API takes the string the user typed in the input field 
 The response contains a list of guesses in the `guesses` field.
 
 
-  - ##### <span class="param">pos</span> see [Position]({% link api/buildingblocks.md %}#position)
+  - ##### <span class="param">pos</span> see [Position]({% link docs/api/buildingblocks.md %}#position)
     The string the user typed in the input field
   - ##### <span class="param">name</span> type `string`
     The street name.

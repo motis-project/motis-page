@@ -95,12 +95,9 @@ a {
  * Header
  */
 .masthead {
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
   margin-top: 1.8rem;
   margin-bottom: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: .05rem solid #999;
+  background: radial-gradient(circle, rgba(38,35,78,1) 0%, rgba(0,22,57,1) 60%);
 }
 
 .masthead h1 {
@@ -109,20 +106,20 @@ a {
 
 .masthead h1 a {
   text-decoration: none;
-  color: rgb(33, 37, 41);
+  color: #fff;
 }
 
 .nav-masthead .nav-link {
   padding: .25rem 0;
   font-weight: 700;
-  color: rgba(0, 0, 0, .7);
+  color: rgba(255, 255, 255, .9);
   background-color: transparent;
   border-bottom: .25rem solid transparent;
 }
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(0, 0, 0, 0.5);
+  border-bottom-color: rgba(255, 255, 255, 0.5);
 }
 
 .nav-masthead .nav-link + .nav-link {
@@ -130,7 +127,7 @@ a {
 }
 
 .nav-masthead .active {
-  border-bottom-color: #333;
+  border-bottom-color: #fff;
 }
 
 .github {

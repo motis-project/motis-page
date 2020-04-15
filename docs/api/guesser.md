@@ -17,4 +17,4 @@ The station autocomplete API takes the string the user typed in the input field 
 
 ### Response
 
-The response contains a list of [Stations]({% link api/buildingblocks.md %}#station) in the `guesses` field.
+The response contains a list of [Stations]({% link docs/api/buildingblocks.md %}#station) in the `guesses` field.

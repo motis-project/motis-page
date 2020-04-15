@@ -26,7 +26,7 @@ The stops are the basic building block of the journey data structure. Everything
 
 Note that there are four cases for `exit` and `enter`: when entering the first train, only `enter` is set. When exiting the last train, only `exit` is set. There may be walk segments before the first `enter` and after the last `exit`. For a direct interchange between two trains, `enter` *and* `exit` are set. For a walk between two stops, `exit` is set at the first stop and `enter` is set at the second stop. There may be more than one walk segments in between. For every stop where the train just stops, neither `enter` nor `exit` is set.
 
-  - ##### <span class="param">station</span> see [Station]({% link api/buildingblocks.md %}#Station)
+  - ##### <span class="param">station</span> see [Station]({% link docs/api/buildingblocks.md %}#Station)
   - ##### <span class="param">arrival</span> see [Event Info](#event-info)
   - ##### <span class="param">departure</span> see [Event Info](#event-info)
   - ##### <span class="param">exit</span> type `boolean`
@@ -38,9 +38,9 @@ Note that there are four cases for `exit` and `enter`: when entering the first t
 #### Event Info
 
   - ##### <span class="param">time</span> type `integer`
-    Real-time timestamp. See [Times]({% link api/buildingblocks.md %}#times).
+    Real-time timestamp. See [Times]({% link docs/api/buildingblocks.md %}#times).
   - ##### <span class="param">schedule_time</span> type `integer`
-    Schedule timestamp. See [Times]({% link api/buildingblocks.md %}#times).
+    Schedule timestamp. See [Times]({% link docs/api/buildingblocks.md %}#times).
   - ##### <span class="param">track</span> type `string`
     The real-time track name.
   - ##### <span class="param">schedule_track</span> type `string`
@@ -95,7 +95,7 @@ In contrast to the [Transports](#transport), there is one trip for each physical
 
   - ##### <span class="param">range</span> see [Range](#range)
     The stop range where this trip is used.
-  - ##### <span class="param">id</span> see [Trip ID]({% link api/buildingblocks.md %}#trip-id)
+  - ##### <span class="param">id</span> see [Trip ID]({% link docs/api/buildingblocks.md %}#trip-id)
     The trip ID. This can be used to uniquely identify the trip in other API requests.
   - ##### <span class="param">debug</span> type `string`
     A string of the form `filename:123:456` specifying the filename and the line range (from 123 to 456) where the services is located in the input timetable. This is useful for debugging purposes.

@@ -50,9 +50,9 @@ Start defines the entry point from where to start the search. If the search dire
 For "ontrip" queries, the travel time is the time between the given `departure_time` (which is actually the arrival time when `search_dir` is set to `Forward`) and the departure/arrival at the search destination.
 
   - ##### <span class="param">position</span> required
-    The departure coordinates for `search_dir=Forward` or arrival coordinates for `search_dir=Backward`. See [Position]({% link api/buildingblocks.md %}#position).
+    The departure coordinates for `search_dir=Forward` or arrival coordinates for `search_dir=Backward`. See [Position]({% link docs/api/buildingblocks.md %}#position).
   - ##### <span class="param">departure_time</span> required
-    The time to start the search at. The search does only consider arrivals before (if `search_dir` is `Backward`) or departures after (if `search_dir` is `Forward`) this point in time. See [Times]({% link api/index.md %}#times).
+    The time to start the search at. The search does only consider arrivals before (if `search_dir` is `Backward`) or departures after (if `search_dir` is `Forward`) this point in time. See [Times]({% link docs/api/index.md %}#times).
 
 
 ### OnTrip Train Start
@@ -60,11 +60,11 @@ For "ontrip" queries, the travel time is the time between the given `departure_t
 This start type is useful if the user is currently in a train. The search algorithm first locates the train and considers all feasible options: at each next stop, the user can either stay in the train or alight. After alighting, the user can either be at their destination, change to another train or walk to another station. Note that the [OnTrip Station Start](#ontrip-station-start) has not the same effect as it will not count the transfer time to other trains.
 
   - ##### <span class="param">trip</span> required
-    The trip to search from. See [Trip ID]({% link api/buildingblocks.md %}#trip-id).
+    The trip to search from. See [Trip ID]({% link docs/api/buildingblocks.md %}#trip-id).
   - ##### <span class="param">station</span> required
-    The trip to search from. See [Input Station]({% link api/buildingblocks.md %}#input-station).
+    The trip to search from. See [Input Station]({% link docs/api/buildingblocks.md %}#input-station).
   - ##### <span class="param">arrival_time</span> required
-    The trip to search from. See [Times]({% link api/index.md %}#times).
+    The trip to search from. See [Times]({% link docs/api/index.md %}#times).
 
 
 ### Intermodal PreTrip Start
@@ -76,9 +76,9 @@ Note that this API does not return journeys that are superseded by journeys arri
 If a client application provides the functionality to scroll through connections (search for earlier or later connections) it is recommended to use the `extend_interval_earlier` and `extend_interval_later` parameters: since the search backend of MOTIS is stateless, it is the task of the client to keep track bounds of the interval that has been considered. Therefore, it is important to store the `interval_begin` and `interval_end` attributes from the routing response. For the first request, set `extend_interval_earlier` as well as `extend_interval_later` to true. For subsequent requests set `extend_interval_earlier` if searching for earlier connections and `extend_interval_later` for later connections.
 
   - ##### <span class="param">position</span> required
-    The departure coordinates for `search_dir=Forward` or arrival coordinates for `search_dir=Backward`. See [Position]({% link api/buildingblocks.md %}#Position).
+    The departure coordinates for `search_dir=Forward` or arrival coordinates for `search_dir=Backward`. See [Position]({% link docs/api/buildingblocks.md %}#Position).
   - ##### <span class="param">interval</span> required
-    The (initial) time interval to consider to depart / arrive. This time interval may be extended by the search algorithm if the `min_connection_count` cannot be reached with non-Pareto-dominated connections departing/arriving within the interval. See [Interval]({% link api/buildingblocks.md %}#interval).
+    The (initial) time interval to consider to depart / arrive. This time interval may be extended by the search algorithm if the `min_connection_count` cannot be reached with non-Pareto-dominated connections departing/arriving within the interval. See [Interval]({% link docs/api/buildingblocks.md %}#interval).
   - ##### <span class="param">min_connection_count</span> optional `integer`, default is `0`
     This requires interval extension to be enabled. Thus, `extend_interval_earlier || extend_interval_later` needs to be `true`. Otherwise, `min_connection_count` does not have an effect. The search extends the interval in the specified direction until there are `min_connection_count` Pateto-optimal connections in the result set. *Note*: if there are less than `min_connection_count` journeys in the result set, this means that the interval bounds have been reached. If the interval has been extended, the response contains the new bounds.
   - ##### <span class="param">extend_interval_earlier</span> optional `boolean`, default is `false`
@@ -111,8 +111,8 @@ If the search direction `search_dir` is set to `Forward`, this the end of the jo
 
   - ##### <span class="param">destination_type</span> required
     The type of the struct of the `destination` entry.
-    - `InputStation`: `destination` is an [Input Station]({% link api/buildingblocks.md %}#input-station)
-    - `InputPosition`: `destination` is an [Position]({% link api/buildingblocks.md %}#position)
+    - `InputStation`: `destination` is an [Input Station]({% link docs/api/buildingblocks.md %}#input-station)
+    - `InputPosition`: `destination` is an [Position]({% link docs/api/buildingblocks.md %}#position)
 
 
 ## Modes
@@ -149,20 +149,20 @@ Both, `start_modes` and `destination_modes` are arrays that contain the followin
 ### Foot PPR
 
   - ##### <span class="param">profile</span> required
-    See [PPR Search Profile]({% link api/buildingblocks.md %}#ppr-search-profile).
+    See [PPR Search Profile]({% link docs/api/buildingblocks.md %}#ppr-search-profile).
 
 ### Car Parking
 
   - ##### <span class="param">max_car_duration</span> required, type `integer`
     Maximal duration to drive in minutes.
   - ##### <span class="param">ppr_search_options</span> required
-    Used for the section from the parking place to the station. See [PPR Search Profile]({% link api/buildingblocks.md %}#ppr-search-profile).
+    Used for the section from the parking place to the station. See [PPR Search Profile]({% link docs/api/buildingblocks.md %}#ppr-search-profile).
 
 ## Routing Response
 
 The routing response contains all Pareto-optimal connections.
 
-  - ##### <span class="param">connections</span> array of [Connections]({% link api/connection.md %})
+  - ##### <span class="param">connections</span> array of [Connections]({% link docs/api/connection.md %})
     Array of all optimal connections.
   - ##### <span class="param">interval_begin</span> type `integer`
     The interval that was searched. This might differ from the initial interval given in the request if `min_connection_count` was set to a value greater than zero.

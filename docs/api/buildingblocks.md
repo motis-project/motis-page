@@ -38,9 +38,9 @@ A geographic coordinate.
 A time interval.
 
   - ##### <span class="param">begin</span> type `integer`
-    The first time in the interval. See [Times]({% link api/index.md %}#times).
+    The first time in the interval. See [Times]({% link docs/api/index.md %}#times).
   - ##### <span class="param">begin</span> type `integer`
-    The first time not in the interval. See [Times]({% link api/index.md %}#times).
+    The first time not in the interval. See [Times]({% link docs/api/index.md %}#times).
 
 
 ## Trip ID
@@ -52,7 +52,7 @@ This combination of information is used as key to unambiguously identify a uniqu
    - ##### <span class="param">train_nr</span> type `integer`
      The unique train number at the first departure.
    - ##### <span class="param">time</span> type `integer`
-     The first departure time. See [Times]({% link api/index.md %}#times).
+     The first departure time. See [Times]({% link docs/api/index.md %}#times).
    - ##### <span class="param">target_station_id</span> type `string`
      The final destination of the trip.
    - ##### <span class="param">target_time</span> type `integer`

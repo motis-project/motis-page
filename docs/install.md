@@ -1,5 +1,7 @@
 ---
 layout: api
+permalink: /docs/install
+shellexample: samples/preprocess.sh
 ---
 
 ## Installation
