@@ -7,9 +7,9 @@ layout: api
 *Based on MOTIS, many research topics have been addressed. MOTIS or one of its predecessor codes have been used to gain the insights presented in the following documents:*
 
 - S. Fahnenschreiber, F. Gündling, M. Keyhani, M. Schnee. [*A Multi-modal Routing Approach Combining Dynamic Ride-sharing and Public Transport*](https://www.sciencedirect.com/science/article/pii/S2352146516300187). [Transportation Research Procedia: Towards future innovative transport: visions, trends and methods 43rd European Transport Conference Selected Proceedings](https://www.sciencedirect.com/journal/transportation-research-procedia/vol/13/suppl/C), 2016
-- M. H. Keyhani, M. Schnee, K. Weihe, H.-P. Zorn. Reliability and Delay Distributions of Train Connections. [http://algo12.fri.uni-lj.si/?file=atmos](ATMOS 2012).
-- A. Berger, C. Blaar, A. Gebhart, M. Müller-Hannemann, and M. Schnee. *Passenger Flow-Oriented Train Disposition*, [ESA 2011](http://www.informatik.uni-trier.de/%7Eley/db/conf/esa/esa2011.html#BergerBGMS11): 227-238
-- M. Schnee. [*Fully Realistic Multi-Criteria Timetable Information Systems*](http://tuprints.ulb.tu-darmstadt.de/1989/). Ph.D. Thesis, Technical University of Darmstadt, October 2009
+- M. H. Keyhani, M. Schnee, K. Weihe, H.-P. Zorn. Reliability and Delay Distributions of Train Connections. [ATMOS 2012](http://algo12.fri.uni-lj.si/?file=atmos).
+- A. Berger, C. Blaar, A. Gebhart, M. Müller-Hannemann, and M. Schnee. *Passenger Flow-Oriented Train Disposition*, [ESA 2011](http://www.informatik.uni-trier.de/%7Eley/db/conf/esa/esa2011.html#BergerBGMS11).
+- M. Schnee. [*Fully Realistic Multi-Criteria Timetable Information Systems*](http://tuprints.ulb.tu-darmstadt.de/1989/). Ph.D. Thesis, Technical University of Darmstadt, October 2009.
 - L. Frede, M. Müller-Hannemann, and M. Schnee. *Efficient On-Trip Timetable Information in the Presence of Delays*. [ATMOS 2008]("http://algo2008.org/doku.php/atmos).
 - Y. Disser, M. Müller-Hannemann, and M. Schnee. *Multi-Criteria Shortest Paths in Time-Dependent Train Networks*. [7th International Workshop on Experimental Algorithms](http://www.wea2008.org/index.html), Provincetown, MA, USA, Lecture Notes in Computer Science 5038, pp. 347-361, Springer 2008.
 - T. Gunkel, M. Müller-Hannemann. and M. Schnee. *Improved Search for Night Train Connections*, [ATMOS 2007](http://www.math.tu-berlin.de/atmos07/).
