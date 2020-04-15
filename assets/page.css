@@ -65,6 +65,13 @@ body {
   padding: 0.25rem 1.25rem .75rem 1.25rem;
 }
 
+.card-title {
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+  background: rgb(38, 35, 78);
+}
+
 .card {
   border: none;
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
@@ -98,6 +105,13 @@ a {
   margin-top: 1.8rem;
   margin-bottom: 2rem;
   background: radial-gradient(circle, rgba(38,35,78,1) 0%, rgba(0,22,57,1) 60%);
+}
+
+
+@media (max-width: 96rem) {
+  .masthead {
+    margin-top: 0;
+  }
 }
 
 .masthead h1 {
