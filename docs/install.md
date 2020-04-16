@@ -21,7 +21,7 @@ To run your own MOTIS instance, you need an OpenStreetMap dataset and a timetabl
 
 Tested on Ubuntu 18.04.
 
-  - **Step 1**: Download the MOTIS distribution from [here](https://github.com/motis-project/motis/releases/latest/download/motis-linux.zip) and unzip it to the `motis` folder. The directory structure must look exactly like the one shown on the right.
+  - **Step 1**: Download the MOTIS distribution from [here](https://github.com/motis-project/motis/releases/latest/download/motis-linux.tar.bz2) and unzip it to the `motis` folder. The directory structure must look exactly like the one shown on the right.
   - **Step 2**: Start MOTIS with `./motis --dataset.path data/hrd`.
   - **Step 3**: Copy the Linux preprocess script on the right to a file and execute the file `preprocess.sh`. Warning: do not execute this script multiple times. The encoding conversion will destroy the file contents when run twice.
   - **Start MOTIS**: `./motis` and visit [https://localhost:8080](https://localhost:8080).
