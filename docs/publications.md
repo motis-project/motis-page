@@ -1,6 +1,5 @@
 ---
 layout: api
-parmalink: /docs/publications
 ---
 
 ## Publications

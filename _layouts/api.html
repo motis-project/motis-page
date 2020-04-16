@@ -4,15 +4,12 @@ layout: default
 
 <div class="row">
   <div class="col-xl-2 sidebar">
-    <h5 class="mt-xl-4">Publications</h5>
-    <ul>
-      <li><a href="{% link publications.md %}">List of Publications</a></li>
-    </ul>
     <h5 class="mt-xl-4">Installation</h5>
     <ul>
       <li><a href="{% link docs/install.md %}#windows-installation-guide">Windows</a></li>
       <li><a href="{% link docs/install.md %}#linux-installation-guide">Linux</a></li>
     </ul>
+
     <h5 class="mt-xl-4">Building Blocks</h5>
     <ul>
       <li><a href="{% link docs/api/buildingblocks.md %}#input-station">Input Station</a></li>
@@ -29,14 +26,19 @@ layout: default
       <li><a href="{% link docs/api/guesser.md %}">Station Autocomplete</a></li>
       <li><a href="{% link docs/api/address.md %}">Address Autocomplete</a></li>
     </ul>
+
+    <h5 class="mt-xl-4">Publications</h5>
+    <ul>
+      <li><a href="{% link docs/publications.md %}">List of Publications</a></li>
+    </ul>
   </div>
 
   <div class="col-xl pr-xl-5 pl-xl-5 pb-5 api-content">
     {{ content }}
   </div>
 
+  {% if page.code %}
   <div class="col-xl-5" style="max-width: 32rem;">
-    {% if page.code %}
     <ul>
     {% for c in site.data[page.code] %}
       <div class="code-example mt-4">
@@ -57,6 +59,6 @@ layout: default
       </div>
     {% endfor %}
     </ul>
-    {% endif %}
   </div>
+  {% endif %}
 </div>
