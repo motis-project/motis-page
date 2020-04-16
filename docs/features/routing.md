@@ -2,7 +2,7 @@
 layout: api
 code: routing
 ---
-  
+
 ## Intermodal and Timetable Routing from Door to Door
 
 MOTIS supports a variety of use cases for intermodal travel. On the one hand, it can be used to compute optimal routes from door to door. On the other hand, it also supports timetable routing from station to station or "mixed" routing from station to address or from address to station. The core of MOTIS routing is a highly efficient timetable data model that enables [real time updates]({% link docs/features/realtime.md %}) and dynamic per-query extension to integrate the parts of the street network that are relevant for a particular query.
