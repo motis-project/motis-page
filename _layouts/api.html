@@ -10,6 +10,13 @@ layout: default
       <li><a href="{% link docs/install.md %}#linux-installation-guide">Linux</a></li>
     </ul>
 
+    <h5 class="mt-xl-4">Features</h5>
+    <ul>
+      <li><a  href="{% link docs/features/routing.md %}">Intermodal Routing</a></li>
+      <li><a href="{% link docs/features/realtime.md %}">Real Time Support</a></li>
+      <li><a href="{% link docs/features/autocomplete.md %}">Autocomplete</a></li>
+    </ul>
+
     <h5 class="mt-xl-4">Building Blocks</h5>
     <ul>
       <li><a href="{% link docs/api/buildingblocks.md %}#input-station">Input Station</a></li>
@@ -20,7 +27,7 @@ layout: default
       <li><a href="{% link docs/api/connection.md %}">Connection</a></li>
     </ul>
 
-    <h5 class="mt-xl-5">API Endpoints</h5>
+    <h5 class="mt-xl-4">API Endpoints</h5>
     <ul>
       <li><a href="{% link docs/api/intermodal.md %}">Intermodal Routing</a></li>
       <li><a href="{% link docs/api/guesser.md %}">Station Autocomplete</a></li>
@@ -52,6 +59,8 @@ layout: default
           {% highlight batch %}{% include {{ c.file }} %}{% endhighlight %}
           {% elsif c.language == 'json' %}
           {% highlight json %}{% include {{ c.file }} %}{% endhighlight %}
+          {% elsif c.language == 'image' %}
+          <img src="{{ '/assets/' | append: c.file | relative_path }}" style="max-width: 100%"/>
           {% else %}
           {% highlight plaintext %}{% include {{ c.file }} %}{% endhighlight %}
           {% endif %}
