@@ -8,6 +8,8 @@ layout: api
 
 
 - F. Gündling, P. Hoch, K. Weihe. [*Multi Objective Optimization of Multimodal Two-Way Roundtrip Journeys*](https://easychair.org/publications/preprint/XVB8). RailNorrköping 2019. 8th International Conference on Railway Operations Modelling and Analysis (ICROMA), Norrköping, Sweden, June 17th–20th, 2019. No. 069.
+- M. H. Keyhani [*Computing Highly Reliable Train Journeys*](https://tuprints.ulb.tu-darmstadt.de/6227/). Ph.D. Thesis, Technical University Darmstadt, April 2017.
+- M. H. Keyhani, M. Schnee, K. Weihe. [*Arrive in Time by Train with High Probability*](https://pubsonline.informs.org/doi/10.1287/trsc.2017.0758). Transportation Science, 51(4). 2017.
 - F. Gündling, M. Keyhani, M. Schnee, K. Weihe. [*Fully Realistic Multi-Criteria Multi-Modal Routing*](http://tuprints.ulb.tu-darmstadt.de/4298/). Report. Technical University of Darmstadt, October 2014.
 - S. Fahnenschreiber, F. Gündling, M. Keyhani, M. Schnee. [*A Multi-modal Routing Approach Combining Dynamic Ride-sharing and Public Transport*](https://www.sciencedirect.com/science/article/pii/S2352146516300187). [Transportation Research Procedia: Towards future innovative transport: visions, trends and methods 43rd European Transport Conference Selected Proceedings](https://www.sciencedirect.com/journal/transportation-research-procedia/vol/13/suppl/C), 2016
 - M. H. Keyhani, M. Schnee, K. Weihe, H.-P. Zorn. Reliability and Delay Distributions of Train Connections. [ATMOS 2012](http://algo12.fri.uni-lj.si/?file=atmos).
