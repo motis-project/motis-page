@@ -251,9 +251,14 @@ a {
 
 .api-content {
   font-size: 95%;
-  max-width: 50%;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (min-width: 1200px) {
+  .api-content {
+    max-width: 50%;
+  }
 }
 
 .api-content h3 {
