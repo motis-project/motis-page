@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://motis-project.de/sitemap.xml
