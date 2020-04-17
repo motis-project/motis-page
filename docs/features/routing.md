@@ -10,6 +10,20 @@ MOTIS supports a variety of use cases for intermodal travel. On the one hand, it
 It is important to note that MOTIS delivers routing results that are feasible in reality and respects as many details as possible. An example are [through trains](https://en.wikipedia.org/wiki/Through_train) (train, bus, or tram services that change their identity) or [portion workings](https://en.wikipedia.org/wiki/Portion_working) (two or more services that couple/split at some point). Other examples are timezones, daylight saving time, or transfer times between tracks at the same platform.
 
 
+### Multi Criteria Optimization
+
+When traveling, there are many criteria to consider. Reaching the destination as quick as possible might be one goal. However, many travelers also value convenience or do not want to pay a high price. Since the trade-off between all criteria maybe different for every traveler, MOTIS computes a non-extensible Pareto set of all optimal connections. Therefore, the result set is guaranteed to contain the perfect journey plan for every existing tradeoff. This means that even for a single departure time, there can be one optimal journey for each number of transfers when considering only two optimization criteria. Optimizing multiple criteria at the same time make the routing algorithmically challenging.
+
+
+### Problem Types
+
+Depending on the use case of the traveler, there are different algorithmic problem descriptions. Basically, there are two search directions: the user can either provide an arrival time (interval) or a departure time interval. The search hen searches backward (in time) from arrival to departure or forward (in time) from departure to arrival. Both types are supported by MOTIS for timetable as well as for intermodal routing.
+
+If the user is currently traveling (e.g. searching for an alternative connection because the original journey is not feasible anymore due to delays), there is only one departure time: the current point in time. The time they need to wait until the first departure should be considered as travel time. Therefore, a connection which is 20min faster but departs 30min later still reaches the destination 10min later. This scenario / search type is called *OnTrip* in MOTIS.
+
+However, if the user is planning their journey, it is useful to get an overview of a whole time interval and be able to scroll earlier and later to search for the best trip. Here, MOTIS optimizes for "later departure" and "earlier arrival" as Pareto criteria. This scenario / search type is called *PreTrip* in MOTIS.
+
+
 ### Algorithms
 
 MOTIS provides multiple state-of-the-art routing algorithms implemented in an efficient manner at its core. All of them support the features mentioned above (e.g. through services / portion working) and are guaranteed to compute exactly the same results. The following algorithms are implemented in MOTIS:
