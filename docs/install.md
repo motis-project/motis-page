@@ -13,7 +13,7 @@ This section describes how to setup a server similar to the [demo server](https:
 
 To run your own MOTIS instance, you need an OpenStreetMap dataset and a timetable in either the GTFS or the HAFAS Rohdaten format. Note that currently, MOTIS supports only certain HAFAS Rohdaten versions (notably a version in use at Deutsche Bahn as well the one provided at [opentransportdata.swiss](https://opentransportdata.swiss)) and not all GTFS features.
 
-  - Download the latest OpenStreetMap dataset for Swizerland in the ".osm.pbf" format from [geofabrik.de](https://download.geofabrik.de/europe/switzerland.html) and put it into your `motis/data` folder. Delete the file `GRENZHALT`.
+  - Download the latest OpenStreetMap dataset for Swizerland in the ".osm.pbf" format from [geofabrik.de](https://download.geofabrik.de/europe/switzerland.html) and put it into your `motis/data` folder. Delete the empty file `GRENZHALT`.
   - Download the latest dataset HAFAS Rohdaten (version 5.20.39 - "Timetable 202x (HRDF)" not version 5.40) dataset from [opentransportdata.swiss](https://opentransportdata.swiss/en/dataset) and extract it into your `motis/data/hrd` folder.
 
 
@@ -21,8 +21,15 @@ To run your own MOTIS instance, you need an OpenStreetMap dataset and a timetabl
 
 Tested on Ubuntu 18.04.
 
-  - **Step 1**: Download the MOTIS distribution from [here](https://github.com/motis-project/motis/releases/latest/download/motis-linux.tar.bz2) and unzip it to the `motis` folder. The directory structure must look exactly like the one shown on the right.
-  - **Step 2**: Start MOTIS with `./motis --dataset.path data/hrd`.
+
+  - **Step 1**: Install a new C++ standard library required by MOTIS.
+{% highlight bash %}
+apt-get install -y --no-install-recommends apt-utils software-properties-common
+add-apt-repository -y ppa:ubuntu-toolchain-r/test
+apt-get update
+apt-get upgrade -y
+{% endhighlight %}
+  - **Step 2**: Download the MOTIS distribution from [here](https://github.com/motis-project/motis/releases/latest/download/motis-linux.tar.bz2) and unzip it to the `motis` folder. The directory structure must look exactly like the one shown on the right.
   - **Step 3**: Copy the Linux preprocess script on the right to a file and execute the file `preprocess.sh`. Warning: do not execute this script multiple times. The encoding conversion will destroy the file contents when run twice.
   - **Start MOTIS**: `./motis` and visit [https://localhost:8080](https://localhost:8080).
 

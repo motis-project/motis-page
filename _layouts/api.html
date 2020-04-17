@@ -12,9 +12,9 @@ layout: default
 
     <h5 class="mt-xl-4">Features</h5>
     <ul>
-      <li><a  href="{% link docs/features/routing.md %}">Intermodal Routing</a></li>
-      <li><a href="{% link docs/features/realtime.md %}">Real Time Support</a></li>
-      <li><a href="{% link docs/features/autocomplete.md %}">Autocomplete</a></li>
+      <li><a href="{% link docs/features/routing.md %}#intermodal-and-timetable-routing-from-door-to-door">Intermodal Routing</a></li>
+      <li><a href="{% link docs/features/realtime.md %}#real-time-support">Real Time Support</a></li>
+      <li><a href="{% link docs/features/autocomplete.md %}#autocompletion-of-addresses-and-station-names">Autocomplete</a></li>
     </ul>
 
     <h5 class="mt-xl-4">Building Blocks</h5>
@@ -24,19 +24,19 @@ layout: default
       <li><a href="{% link docs/api/buildingblocks.md %}#interval">Interval</a></li>
       <li><a href="{% link docs/api/buildingblocks.md %}#trip-id">Trip ID</a></li>
       <li><a href="{% link docs/api/buildingblocks.md %}#ppr-search-profile">PPR Search Profile</a></li>
-      <li><a href="{% link docs/api/connection.md %}">Connection</a></li>
+      <li><a href="{% link docs/api/connection.md %}#connection">Connection</a></li>
     </ul>
 
     <h5 class="mt-xl-4">API Endpoints</h5>
     <ul>
-      <li><a href="{% link docs/api/intermodal.md %}">Intermodal Routing</a></li>
-      <li><a href="{% link docs/api/guesser.md %}">Station Autocomplete</a></li>
-      <li><a href="{% link docs/api/address.md %}">Address Autocomplete</a></li>
+      <li><a href="{% link docs/api/intermodal.md %}#intermodal-routing-request">Intermodal Routing</a></li>
+      <li><a href="{% link docs/api/guesser.md %}#station-autocompletion-based-on-timetable-data">Station Autocomplete</a></li>
+      <li><a href="{% link docs/api/address.md %}#address-autocompletion-based-on-openstreetmap-data">Address Autocomplete</a></li>
     </ul>
 
     <h5 class="mt-xl-4">Publications</h5>
     <ul>
-      <li><a href="{% link docs/publications.md %}">List of Publications</a></li>
+      <li><a href="{% link docs/publications.md %}#publications">List of Publications</a></li>
     </ul>
   </div>
 
@@ -47,7 +47,7 @@ layout: default
   {% if page.code %}
   <div class="col-xl-4 pb-3 pb-xl-0">
     {% for c in site.data[page.code] %}
-      <div class="code-example mt-xl-4">
+      <div class="code-example mt-4">
         <div class="code-example-head">
           {{ c.title }}
         </div>
