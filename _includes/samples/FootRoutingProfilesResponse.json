@@ -1,0 +1,28 @@
+{
+  "content_type": "FootRoutingProfilesResponse",
+  "content": {
+    "profiles": [
+      {
+        "name": "accessibility1",
+        "walking_speed": 1.4
+      },
+      {
+        "name": "default",
+        "walking_speed": 1.4
+      },
+      {
+        "name": "distance_only",
+        "walking_speed": 1.4
+      },
+      {
+        "name": "elevation",
+        "walking_speed": 1.4
+      },
+      {
+        "name": "wheelchair",
+        "walking_speed": 1.4
+      }
+    ]
+  },
+  "id": 1
+}

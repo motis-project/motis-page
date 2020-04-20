@@ -69,3 +69,10 @@ The profile to use for the Per Pedes Routing search.
     The search profile to use.
   - ##### <span class="param">duration_limit</span> required, type `integer`
     The maximal time duration in seconds.
+
+## Polyline
+
+A sequence of connected line segments.
+
+  - ##### <span class="param">coordinates</span> array of `float`
+    A sequence of latitude, longitude pairs.

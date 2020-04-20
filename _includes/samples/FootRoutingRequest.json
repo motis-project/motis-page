@@ -1,0 +1,26 @@
+{
+  "destination": {
+    "type": "Module",
+    "target": "/ppr/route"
+  },
+  "content_type": "FootRoutingRequest",
+  "content": {
+    "start": {
+      "lat": 47.390876,
+      "lng": 8.487421
+    },
+    "destinations": [
+      {
+        "lat": 47.391109,
+        "lng": 8.488375
+      }
+    ],
+    "search_options": {
+      "profile": "default",
+      "duration_limit": 1800
+    },
+    "include_steps": true,
+    "include_edges": false,
+    "include_path": true
+  }
+}
