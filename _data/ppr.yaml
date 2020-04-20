@@ -1,0 +1,12 @@
+- title: "Pedestrian Routing Request Example"
+  language: json
+  file: samples/FootRoutingRequest.json
+- title: "Pedestrian Routing Response Example"
+  language: json
+  file: samples/FootRoutingResponse.json
+- title: "PPR Profiles Request Example"
+  language: json
+  file: samples/FootRoutingProfilesRequest.json
+- title: "PPR Profiles Response Example"
+  language: json
+  file: samples/FootRoutingProfilesResponse.json
