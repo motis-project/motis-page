@@ -4,20 +4,34 @@ layout: default
 
 <div class="row">
   <div class="col-xl-2 sidebar">
-    <h5 class="mt-xl-4">Installation</h5>
+
+    <input id="docsearch" />
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
+      docsearch({
+        appId: 'A9LOFQMRFZ',
+        apiKey: '570ab1b39c37442661288a8e887fbee4',
+        indexName: 'motis-project.de',
+        inputSelector: '#docsearch',
+        enhancedSearchInput: true,
+        debug: false
+      });
+    </script>
+
+    <h5 class="mt-xl-4 {% if page.url contains 'install' %}active{% endif %}">Installation</h5>
     <ul>
       <li><a href="{% link docs/install.md %}#windows-installation-guide">Windows</a></li>
       <li><a href="{% link docs/install.md %}#linux-installation-guide">Linux</a></li>
     </ul>
 
-    <h5 class="mt-xl-4">Features</h5>
+    <h5 class="mt-xl-4 {% if page.url contains 'features' %}active{% endif %}">Features</h5>
     <ul>
       <li><a href="{% link docs/features/routing.md %}#intermodal-and-timetable-routing-from-door-to-door">Intermodal Routing</a></li>
       <li><a href="{% link docs/features/realtime.md %}#real-time-support">Real Time Support</a></li>
       <li><a href="{% link docs/features/autocomplete.md %}#autocompletion-of-addresses-and-station-names">Autocomplete</a></li>
     </ul>
 
-    <h5 class="mt-xl-4">Building Blocks</h5>
+    <h5 class="mt-xl-4 {% if page.url contains 'buildingblocks' or page.url contains 'connection' %}active{% endif %}">Building Blocks</h5>
     <ul>
       <li><a href="{% link docs/api/buildingblocks.md %}#input-station">Input Station</a></li>
       <li><a href="{% link docs/api/buildingblocks.md %}#position">Position</a></li>
@@ -27,15 +41,15 @@ layout: default
       <li><a href="{% link docs/api/connection.md %}#connection">Connection</a></li>
     </ul>
 
-    <h5 class="mt-xl-4">API Endpoints</h5>
+    <h5 class="mt-xl-4 {% if page.url contains 'endpoint' %}active{% endif %}">API Endpoints</h5>
     <ul>
-      <li><a href="{% link docs/api/intermodal.md %}#intermodal-routing-request">Intermodal Routing</a></li>
-      <li><a href="{% link docs/api/guesser.md %}#station-autocompletion-based-on-timetable-data">Station Autocomplete</a></li>
-      <li><a href="{% link docs/api/address.md %}#address-autocompletion-based-on-openstreetmap-data">Address Autocomplete</a></li>
-      <li><a href="{% link docs/api/ppr.md %}#pedestrian-routing-request">Pedestrian Routing</a></li>
+      <li><a href="{% link docs/api/endpoint/intermodal.md %}#intermodal-routing-request">Intermodal Routing</a></li>
+      <li><a href="{% link docs/api/endpoint/guesser.md %}#station-autocompletion-based-on-timetable-data">Station Autocomplete</a></li>
+      <li><a href="{% link docs/api/endpoint/address.md %}#address-autocompletion-based-on-openstreetmap-data">Address Autocomplete</a></li>
+      <li><a href="{% link docs/api/endpoint/ppr.md %}#pedestrian-routing-request">Pedestrian Routing</a></li>
     </ul>
 
-    <h5 class="mt-xl-4">Publications</h5>
+    <h5 class="mt-xl-4 {% if page.url contains 'publications' %}active{% endif %}">Publications</h5>
     <ul>
       <li><a href="{% link docs/publications.md %}#publications">List of Publications</a></li>
     </ul>

@@ -37,7 +37,7 @@ MOTIS also contains variants of these algorithms which are not described in the 
 
 ### The routing JSON API is available over HTTP:
 
-  - [Intermodal Routing API]({% link docs/api/intermodal.md %})
+  - [Intermodal Routing API]({% link docs/api/endpoint/intermodal.md %})
 
 ### Try it out live:
 

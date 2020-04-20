@@ -221,6 +221,7 @@ a {
   .sidebar {
     min-height: calc(100vh - 20rem);
     border-right: 1px solid #dadada;
+    padding-top: 4em;
   }
 }
 

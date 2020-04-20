@@ -17,8 +17,8 @@ Basically, every potential trigram, that is three consecutive characters in a wo
 
 ### The Autocompletion Feature is Available as JSON API over HTTP:
 
-  - [Address Autocomplete]({% link docs/api/address.md %})
-  - [Station autocomplete]({% link docs/api/guesser.md %})
+  - [Address Autocomplete]({% link docs/api/endpoint/address.md %})
+  - [Station autocomplete]({% link docs/api/endpoint/guesser.md %})
 
 
 ### Try it out live:
