@@ -6,17 +6,6 @@ layout: default
   <div class="col-xl-2 sidebar">
 
     <input id="docsearch" />
-    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-    <script>
-      docsearch({
-        appId: 'A9LOFQMRFZ',
-        apiKey: '570ab1b39c37442661288a8e887fbee4',
-        indexName: 'motis-project.de',
-        inputSelector: '#docsearch',
-        enhancedSearchInput: true,
-        debug: false
-      });
-    </script>
 
     <h5 class="mt-xl-4 {% if page.url contains 'install' %}active{% endif %}">Installation</h5>
     <ul>
@@ -84,3 +73,16 @@ layout: default
   </div>
   {% endif %}
 </div>
+
+
+<script src="/assets/docsearch.min.js"></script>
+<script>
+docsearch({
+  appId: 'A9LOFQMRFZ',
+  apiKey: '570ab1b39c37442661288a8e887fbee4',
+  indexName: 'motis-project.de',
+  inputSelector: '#docsearch',
+  enhancedSearchInput: true,
+  debug: false
+});
+</script>
