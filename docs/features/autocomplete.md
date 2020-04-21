@@ -23,4 +23,4 @@ Basically, every potential trigram, that is three consecutive characters in a wo
 
 ### Try it out live:
 
-  - [Demo](https://demo.motis-project.de/public/)
+  - [Demo](https://switzerland.motis-project.de)
