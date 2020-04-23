@@ -340,15 +340,6 @@ a {
   margin-top: 1em;
 }
 
-
-@media (min-width: 1200px) {
-  .social-links {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 8px;
-  }
-}
-
 @media (min-width: 768px) {
   .post-content {
     max-width: 56rem;
@@ -365,13 +356,28 @@ a {
   letter-spacing: .025em;
   color: rgb(36, 41, 46, 0.8);
 }
+.share {
+  color: rgb(42, 47, 69);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 80%;
+}
 .social-links a {
-  margin: 0 10px;
+  margin: 0 7px;
 }
-.social-links svg {
+.twitter svg, .linkedin svg, .facebook svg {
   fill: rgb(36, 41, 46, 0.8);
+  transition: fill .5s;
 }
-
+.twitter svg:hover {
+  fill: #33CCFF;
+}
+.linkedin svg:hover {
+  fill: #4875B4;
+}
+.facebook svg:hover {
+  fill: #3B5998;
+}
 .code-example {
   color: rgb(79, 86, 107);
   font-size: 15px;
