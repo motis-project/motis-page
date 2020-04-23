@@ -13,6 +13,18 @@ This post will not go into the details of the functionality of MOTIS; these are 
 
 MOTIS started as a research software project at the Technical University of Darmstadt in cooperation with Deutsche Bahn and <a href="https://datagon.de/">datagon GmbH</a> in the early 2000s. Since then, the codebase has seen many new features and overhauls. MOTIS has been used for quality assurance at Deutsche Bahn and as a basis for [PANDA](https://inside.bahn.de/anschlusszug-panda/), a tool to assist train dispatchers in their decision making process which is developed by the [team of Prof. Dr. Matthias Müller-Hannemann at the Martin-Luther-Universität Halle-Wittenberg](https://www.informatik.uni-halle.de/arbeitsgruppen/datenstrukturen/).
 
+### GitHub
+
+We use GitHub to
+
+  - track code changes (Git): [github.com/motis-project/motis](https://github.com/motis-project/motis)
+  - track issues (bug reports, enhancements, etc.): [github.com/motis-project/motis/issues](http://github.com/motis-project/motis/issues)
+  - monitor software quality through continuous integration (CI): [github.com/motis-project/motis/actions](https://github.com/motis-project/motis/actions)
+  - release new versions of MOTIS: [github.com/motis-project/motis/releases](https://github.com/motis-project/motis/releases)
+
+
+Every successful CI build produces a MOTIS distribution archive.
+
 
 ### Status
 
