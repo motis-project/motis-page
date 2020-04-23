@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div class="row">
+  <div class="col-xl pb-0 pb-lg-5 api-content post-content">
+    <h2 style="font-size: 155%" class="pb-3 text-center text-md-left">{{page.title}}</h2>
+    <div class="row">
+      <div class="col-lg-10 post">
+        {{ content }}
+      </div>
+
+      <div class="col-lg-2 mt-5 mt-md-1 text-center order-lg-first">
+        <div class="date">{{ page.date | date: "%b %d, %Y" }}</div>
+        <div class="mt-2">
+          <a href="https://github.com/{{ page.author }}">
+            <img style="border-radius: 5px;"
+                 src="https://avatars0.githubusercontent.com/{{ page.author }}?v=3&s=20"/>
+             {{ page.author }}
+          </a>
+        </div>
+        <div class="mt-3 mb-2 mb-lg-5 social-links">
+          <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank">{% include social/facebook.svg %}</a>
+          <a href="https://twitter.com/home?status={{ site.url }}{{ page.url }}" target="_blank">{% include social/twitter.svg %}</a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ site.url }}{{ page.url }}&amp;title={{ page.title }}" target="_blank">{% include social/linkedin.svg %}</a>
+        </div>
+        {% if page.version %}
+        <div class="mb-3">
+          <a href="https://github.com/motis-project/motis/releases/tag/v{{ page.version }}">
+            <span class="badge badge-primary" style="position: relative; top: -2px">Release v{{ page.version }}</span>
+          </a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

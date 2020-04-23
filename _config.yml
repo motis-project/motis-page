@@ -32,6 +32,11 @@ plugins:
   - jekyll-seo-tag
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-algolia
+
+algolia:
+  application_id: 'A9LOFQMRFZ'
+  index_name: 'motis-project.de'
 
 # Exclude from processing.
 # The following items will not be processed, by default.

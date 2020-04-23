@@ -1,0 +1,16 @@
+---
+layout: posts
+---
+
+{% for post in site.posts %}
+  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  {% if post.version %}
+  <a href="https://github.com/motis-project/motis/releases/tag/v{{ post.version }}">
+    <span class="badge badge-primary" style="position: relative; top: -2px">Release v{{ post.version }}</span>
+  </a>
+  {% endif %}
+  <span class="date ml-3">{{ post.date | date: "%b %d, %Y" }}</span>
+  <a class="ml-3" href="https://github.com/{{ post.author }}"><img src="https://avatars0.githubusercontent.com/{{ post.author }}?v=3&s=20"/> {{ post.author }}</a>
+  <p class="mt-3">{{ post.excerpt }}</p>
+  <p class="text-right"><a href="{{ post.url }}">Read more</a></p>
+{% endfor %}
