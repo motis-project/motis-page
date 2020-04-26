@@ -41,11 +41,11 @@ Since the original commit history did contain data that was not suited for publi
   - Florian Hopp
   - Pablo Hoch <a href="https://github.com/pablohoch">@pablohoch</a>
   - Tobias Raffel <a href="https://github.com/traffel">@traffel</a>
-  - Jonas Schlitzer <a href="https://www.linkedin.com/in/jonas-schlitzer-065667151">LinkedIn</a>
+  - Jonas Schlitzer <a href="https://github.com/joschli">@joschli</a>
   - Mathias Schnee <a href="http://drschnee.de">DrSchnee.de</a>
   - Mohammad Keyhani <a href="https://www.linkedin.com/in/dr-mohammad-h-keyhani-101a7312a/">LinkedIn</a>
   - Leon Steiner <a href="https://github.com/nZeloT">@nZeloT</a>
-  - Tim Witzel <a href="https://www.xing.com/profile/Tim_Witzel3/cv">Xing</a>
+  - Tim Witzel <a href="https://github.com/Nicrey">@Nicrey</a>
 
 
 All new contributers will be listed [here](https://github.com/motis-project/motis/graphs/contributors).
