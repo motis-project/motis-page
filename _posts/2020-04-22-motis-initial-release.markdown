@@ -7,7 +7,7 @@ author: felixguendling
 version: 0.1
 ---
 
-We are happy to announce the first MOTIS open source release! MOTIS is an acronym that stands for **M**ulti **O**bjective **T**ravel **I**information **S**ystem. One of its main features is computing optimal intermodal journeys (including private car, bicycle, bus, tram, trains, etc.) from door to door based on a real-time timetable.
+We are happy to announce the first MOTIS open source release! MOTIS is an acronym that stands for **M**ulti **O**bjective **T**ravel **I**nformation **S**ystem. One of its main features is computing optimal intermodal journeys (including private car, bicycle, bus, tram, trains, etc.) from door to door based on a real-time timetable.
 
 This post will not go into the details of the functionality of MOTIS; these are listed on the main page of [motis-project.de](https://motis-project.de) as well as on the "Docs" page. A description of the JSON API provided by MOTIS can be found [here]({% link docs/api/index.md %}).
 
