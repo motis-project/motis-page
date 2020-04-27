@@ -109,6 +109,11 @@ a {
   background: #24292e;
 }
 
+.twitter-head svg {
+  color: red;
+  fill: red;
+}
+
 
 @media (max-width: 96rem) {
   .masthead {

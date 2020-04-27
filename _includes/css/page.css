@@ -369,7 +369,7 @@ a {
   fill: rgb(36, 41, 46, 0.8);
   transition: fill .5s;
 }
-.twitter svg:hover {
+.twitter svg:hover, .twitter-head svg {
   fill: #33CCFF;
 }
 .linkedin svg:hover {
