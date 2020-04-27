@@ -73,7 +73,7 @@ This start type is useful if the user is currently in a train. The search algori
   - ##### <span class="param">station</span> required
     Station to start searching from (one of the stops of the trip). Should be the first station, the user can alight. See [Input Station]({% link docs/api/buildingblocks.md %}#input-station).
   - ##### <span class="param">arrival_time</span> required
-    The trip to search from. See [Times]({% link docs/api/index.md %}#times).
+    The arrival time to assume at the station. See [Times]({% link docs/api/index.md %}#times).
 
 
 ### Intermodal PreTrip Start
