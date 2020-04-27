@@ -54,6 +54,16 @@ For "ontrip" queries, the travel time is the time between the given `departure_t
     The time to start the search at. The search does only consider arrivals before (if `search_dir` is `Backward`) or departures after (if `search_dir` is `Forward`) this point in time. See [Times]({% link docs/api/index.md %}#times).
 
 
+### OnTrip Station Start
+
+This query is useful if the traveler is currently at a station (or planning to be at a station) and wants to compute optimal journeys to their destination (station or location). For "ontrip" queries, the travel time is the time between the given `departure_time` (which is actually the arrival time when `search_dir` is set to `Forward`) and the departure/arrival at the search destination.
+
+  - ##### <span class="param">InputStation</span> required
+    The departure station for `search_dir=Forward` or arrival station for `search_dir=Backward`. See [InputStation]({% link docs/api/buildingblocks.md %}#input-station).
+  - ##### <span class="param">departure_time</span> required
+    The time to start the search at. The search does only consider arrivals before (if `search_dir` is `Backward`) or departures after (if `search_dir` is `Forward`) this point in time. See [Times]({% link docs/api/index.md %}#times).
+
+
 ### OnTrip Train Start
 
 This start type is useful if the user is currently in a train. The search algorithm first locates the train and considers all feasible options: at each next stop, the user can either stay in the train or alight. After alighting, the user can either be at their destination, change to another train or walk to another station. Note that the [OnTrip Station Start](#ontrip-station-start) has not the same effect as it will not count the transfer time to other trains.
@@ -61,7 +71,7 @@ This start type is useful if the user is currently in a train. The search algori
   - ##### <span class="param">trip</span> required
     The trip to search from. See [Trip ID]({% link docs/api/buildingblocks.md %}#trip-id).
   - ##### <span class="param">station</span> required
-    The trip to search from. See [Input Station]({% link docs/api/buildingblocks.md %}#input-station).
+    Station to start searching from (one of the stops of the trip). Should be the first station, the user can alight. See [Input Station]({% link docs/api/buildingblocks.md %}#input-station).
   - ##### <span class="param">arrival_time</span> required
     The trip to search from. See [Times]({% link docs/api/index.md %}#times).
 
@@ -93,7 +103,7 @@ This start type is similar to the [Intermodal PreTrip Start](#intermodal-pretrip
 The search will only consider footpaths from the timetable data (HAFAS Rohdaten or GTFS). In contrast to the [Intermodal PreTrip Start](#intermodal-pretrip-start), equivalent stations (see HAFAS Rohdaten documentation "Meta Station") are considered as start stations, too.
 
   - ##### <span class="param">station</span> required
-    Maximal duration to walk in minutes.
+    The station to start from. See [Input Station]({% link docs/api/buildingblocks.md %}#input-station)
   - ##### <span class="param">interval</span> required
     See corresponding parameter in [Intermodal PreTrip Start](#intermodal-pretrip-start).
   - ##### <span class="param">min_connection_count</span> optional `integer`, default is `0`
