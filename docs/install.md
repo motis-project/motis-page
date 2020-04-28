@@ -24,10 +24,10 @@ Tested on Ubuntu 18.04.
 
   - **Step 1**: Install a new C++ standard library required by MOTIS.
 {% highlight bash %}
-apt-get install -y --no-install-recommends apt-utils software-properties-common
+apt install -y --no-install-recommends apt-utils software-properties-common
 add-apt-repository -y ppa:ubuntu-toolchain-r/test
-apt-get update
-apt-get upgrade -y
+apt update
+apt upgrade -y
 {% endhighlight %}
   - **Step 2**: Download the MOTIS distribution from [here](https://github.com/motis-project/motis/releases/latest/download/motis-linux.tar.bz2) and unzip it to the `motis` folder. The directory structure must look exactly like the one shown on the right.
   - **Step 3**: Copy the Linux preprocess script on the right to a file and execute the file `preprocess.sh`. Warning: do not execute this script multiple times. The encoding conversion will destroy the file contents when run twice.
