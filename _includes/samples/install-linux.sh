@@ -5,7 +5,7 @@ find . -empty -delete
 # Convert HRD data from UTF8 to ISO_8859-1.
 for file in data/hrd/*
 do
-    iconv -f UTF8 -t ISO_8859-1 -o "$file.new" "$file" &&
+    iconv -f UTF8 -t ISO_8859-1 "$file" > "$file.new" &&
     mv -f "$file.new" "$file"
 done
 
