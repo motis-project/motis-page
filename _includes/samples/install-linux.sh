@@ -12,6 +12,15 @@ done
 # Create data/hrd/schedule.raw
 ./motis --dataset.path data/hrd --mode test
 
+# OSRM
+mkdir -p data/car data/bike
+ln -s `pwd`/data/switzerland-latest.osm.pbf data/car/switzerland-latest.osm.pbf
+ln -s `pwd`/data/switzerland-latest.osm.pbf data/bike/switzerland-latest.osm.pbf
+./osrm-extract data/car/switzerland-latest.osm.pbf -p profiles/car.lua
+./osrm-contract data/car/switzerland-latest.osrm
+./osrm-extract data/bike/switzerland-latest.osm.pbf -p profiles/bicycle.lua
+./osrm-contract data/bike/switzerland-latest.osrm
+
 # Preprocess data.
 ./ppr-preprocess -o data/switzerland-latest.osm.pbf -g data/routing-graph.ppr
 ./at-example extract data/switzerland-latest.osm.pbf data/at.db
@@ -25,15 +34,6 @@ done
   --db data/parking_footedges.db \
   --parking data/parking.txt \
   --ppr_graph data/routing-graph.ppr
-
-# OSRM
-mkdir -p data/car data/bike
-ln -s `pwd`/data/switzerland-latest.osm.pbf data/car/switzerland-latest.osm.pbf
-ln -s `pwd`/data/switzerland-latest.osm.pbf data/bike/switzerland-latest.osm.pbf
-./osrm-extract data/car/switzerland-latest.osm.pbf -p profiles/car.lua
-./osrm-contract data/car/switzerland-latest.osrm
-./osrm-extract data/bike/switzerland-latest.osm.pbf -p profiles/bicycle.lua
-./osrm-contract data/bike/switzerland-latest.osrm
 
 # Write config file.
 cat << EOF >> config.ini
