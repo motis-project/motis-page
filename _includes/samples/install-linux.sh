@@ -16,9 +16,9 @@ done
 mkdir -p data/car data/bike
 ln -s `pwd`/data/switzerland-latest.osm.pbf data/car/switzerland-latest.osm.pbf
 ln -s `pwd`/data/switzerland-latest.osm.pbf data/bike/switzerland-latest.osm.pbf
-./osrm-extract data/car/switzerland-latest.osm.pbf -p profiles/car.lua
+./osrm-extract data/car/switzerland-latest.osm.pbf -p osrm-profiles/car.lua
 ./osrm-contract data/car/switzerland-latest.osrm
-./osrm-extract data/bike/switzerland-latest.osm.pbf -p profiles/bicycle.lua
+./osrm-extract data/bike/switzerland-latest.osm.pbf -p osrm-profiles/bicycle.lua
 ./osrm-contract data/bike/switzerland-latest.osrm
 
 # Preprocess data.
@@ -33,13 +33,15 @@ ln -s `pwd`/data/switzerland-latest.osm.pbf data/bike/switzerland-latest.osm.pbf
   --schedule data/hrd \
   --db data/parking_footedges.db \
   --parking data/parking.txt \
-  --ppr_graph data/routing-graph.ppr
+  --ppr_graph data/routing-graph.ppr \
+  --ppr_profile ppr-profiles
 
 # Write config file.
 cat << EOF >> config.ini
 server.static_path=web
 dataset.path=data/hrd
 ppr.graph=data/routing-graph.ppr
+ppr.profile=ppr-profiles
 osrm.dataset=data/car/switzerland-latest.osrm
 osrm.dataset=data/bike/switzerland-latest.osrm
 address.db=data/at.db

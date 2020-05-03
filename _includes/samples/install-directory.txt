@@ -6,7 +6,8 @@ motis
 ├── parking-prepare
 ├── path-prepare
 ├── ppr-preprocess
-├── profiles
+├── osrm-profiles
+├── ppr-profiles
 ├── web
 └── data
     ├── switzerland-latest.osm.pbf
