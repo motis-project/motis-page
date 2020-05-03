@@ -13,8 +13,8 @@ This section describes how to setup a server similar to the [demo server](https:
 
 To run your own MOTIS instance, you need an OpenStreetMap dataset and a timetable in either the GTFS or the HAFAS Rohdaten format. Note that currently, MOTIS supports only certain HAFAS Rohdaten versions (notably a version in use at Deutsche Bahn as well the one provided at [opentransportdata.swiss](https://opentransportdata.swiss)) and not all GTFS features.
 
-  - Download the latest OpenStreetMap dataset for Switzerland in the ".osm.pbf" format from [geofabrik.de](https://download.geofabrik.de/europe/switzerland.html) and put it into your `motis/data` folder. Delete the empty file `GRENZHALT`.
-  - Download the latest dataset HAFAS Rohdaten (version 5.20.39 - "Timetable 202x (HRDF)" not version 5.40) dataset from [opentransportdata.swiss](https://opentransportdata.swiss/en/dataset) and extract it into your `motis/data/hrd` folder.
+  - Download the latest OpenStreetMap dataset for Switzerland in the ".osm.pbf" format from [geofabrik.de](https://download.geofabrik.de/europe/switzerland.html) and put it into your `motis/data` folder.
+  - Download the latest dataset HAFAS Rohdaten (version 5.20.39 - "Timetable 202x (HRDF)" not version 5.40) dataset from [opentransportdata.swiss](https://opentransportdata.swiss/en/dataset) and extract it into your `motis/data/hrd` folder. Delete the empty file `GRENZHALT`.
 
 
 ### Linux Installation Guide

@@ -12,20 +12,6 @@ for %%f in (data\hrd\*) do (
 REM Create data\hrd\schedule.raw
 motis.exe --dataset.path data/hrd --mode test
 
-REM Preprocess data.
-ppr-preprocess.exe -o data\switzerland-latest.osm.pbf -g data\routing-graph.ppr
-at-example.exe extract data\switzerland-latest.osm.pbf data\at.db
-path-prepare.exe ^
-  --schedule data\hrd ^
-  --osm data\switzerland-latest.osm.pbf ^
-  --osrm data\car\switzerland-latest.osrm
-parking-prepare.exe ^
-  --osm data\switzerland-latest.osm.pbf ^
-  --schedule data\hrd ^
-  --db data\parking_footedges.db ^
-  --parking data\parking.txt ^
-  --ppr_graph data\routing-graph.ppr
-
 REM OSRM
 mkdir data\car
 move data\switzerland-latest.osm.pbf data\car
@@ -40,6 +26,20 @@ osrm-extract.exe data\bike\switzerland-latest.osm.pbf -p profiles\bicycle.lua
 osrm-contract.exe data\bike\switzerland-latest.osrm
 
 move data\bike\switzerland-latest.osm.pbf data\switzerland-latest.osm.pbf
+
+REM Preprocess data.
+ppr-preprocess.exe -o data\switzerland-latest.osm.pbf -g data\routing-graph.ppr
+at-example.exe extract data\switzerland-latest.osm.pbf data\at.db
+path-prepare.exe ^
+  --schedule data\hrd ^
+  --osm data\switzerland-latest.osm.pbf ^
+  --osrm data\car\switzerland-latest.osrm
+parking-prepare.exe ^
+  --osm data\switzerland-latest.osm.pbf ^
+  --schedule data\hrd ^
+  --db data\parking_footedges.db ^
+  --parking data\parking.txt ^
+  --ppr_graph data\routing-graph.ppr
 
 REM Write config file.
 (
