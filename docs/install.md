@@ -30,7 +30,7 @@ apt update
 apt upgrade -y
 {% endhighlight %}
   - **Step 2**: Download the MOTIS distribution from [here](https://github.com/motis-project/motis/releases/latest/download/motis-linux.tar.bz2) and extract it to the `motis` folder. The directory structure must look exactly like the one shown on the right.
-  - **Step 3**: Copy the Linux preprocess script on the right to a file and execute the file `preprocess.sh`. Warning: do not execute this script multiple times. The encoding conversion will destroy the file contents when run twice.
+  - **Step 3**: Copy the Linux preprocess script on the right to a file and execute the file `preprocess.sh`. If asked "approximate areas? (y/n) :" type `y` and press Enter. Warning: do not execute this script multiple times. The encoding conversion will destroy the file contents when run twice.
   - **Start MOTIS**: `./motis` and visit [https://localhost:8080](https://localhost:8080).
 
 
@@ -40,5 +40,5 @@ Tested on Windows 10.
 
   - **Step 1**: Download the MOTIS distribution from [here](https://github.com/motis-project/motis/releases/latest/download/motis-windows.zip) and extract it to the `motis` folder. The directory structure must look exactly like the one shown on the right.
   - **Step 2**: Download the `iconv.exe` executable (static version, 64bit) from [here](https://mlocati.github.io/articles/gettext-iconv-windows.html) (it is located in the `bin` directory of the archive) and place it in the `motis` folder next to the MOTIS binaries.
-  - **Step 3**: Copy the Windows preprocess script on the right to a file and execute the file `preprocess.bat`. Warning: do not execute this script multiple times. The encoding conversion will destroy the file contents when run twice.
+  - **Step 3**: Copy the Windows preprocess script on the right to a file and execute the file `preprocess.bat`. If asked "approximate areas? (y/n) :" type `y` and press Enter. Warning: do not execute this script multiple times. The encoding conversion will destroy the file contents when run twice.
   - **Start MOTIS**: `motis.exe` and visit [https://localhost:8080](https://localhost:8080).
