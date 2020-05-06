@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "MOTIS Initial Release"
-date:   2020-04-22 12:22:54 +0100
+date:   2020-05-06 12:22:54 +0100
 categories: release
 author: felixguendling
 version: 0.1
@@ -33,7 +33,7 @@ Since the API as well as the internal data model is still subject to change, MOT
 
 ### Initial contributors
 
-Since the original commit history did contain data that was not suited for publication, we had to start with a fresh history. Therefore, we list all contributers to the initial version here.
+Since the original commit history did contain data that was not suited for publication, we had to start with a fresh history. Therefore, we list all contributors to the initial version here.
 
   - Sebastian Fahnenschreiber <a href="https://github.com/sfahnens">@sfahnens</a>
   - Felix Gündling <a href="https://github.com/felixguendling">@felixguendling</a>
@@ -48,4 +48,4 @@ Since the original commit history did contain data that was not suited for publi
   - Tim Witzel <a href="https://github.com/Nicrey">@Nicrey</a>
 
 
-All new contributers will be listed [here](https://github.com/motis-project/motis/graphs/contributors).
+All new contributors will be listed [here](https://github.com/motis-project/motis/graphs/contributors).
