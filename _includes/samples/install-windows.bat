@@ -16,13 +16,13 @@ REM OSRM
 mkdir data\car
 move data\switzerland-latest.osm.pbf data\car
 
-osrm-extract.exe data\car\switzerland-latest.osm.pbf -p profiles\car.lua
+osrm-extract.exe data\car\switzerland-latest.osm.pbf -p osrm-profiles\car.lua
 osrm-contract.exe data\car\switzerland-latest.osrm
 
 mkdir data\bike
 move data\car\switzerland-latest.osm.pbf data\bike\switzerland-latest.osm.pbf
 
-osrm-extract.exe data\bike\switzerland-latest.osm.pbf -p profiles\bicycle.lua
+osrm-extract.exe data\bike\switzerland-latest.osm.pbf -p osrm-profiles\bicycle.lua
 osrm-contract.exe data\bike\switzerland-latest.osrm
 
 move data\bike\switzerland-latest.osm.pbf data\switzerland-latest.osm.pbf
@@ -39,13 +39,15 @@ parking-prepare.exe ^
   --schedule data\hrd ^
   --db data\parking_footedges.db ^
   --parking data\parking.txt ^
-  --ppr_graph data\routing-graph.ppr
+  --ppr_graph data\routing-graph.ppr ^
+  --ppr_profile ppr-profiles
 
 REM Write config file.
 (
 echo server.static_path=web
 echo dataset.path=data\hrd
 echo ppr.graph=data\routing-graph.ppr
+echo ppr.profile=ppr-profiles
 echo osrm.dataset=data\car\switzerland-latest.osrm
 echo osrm.dataset=data\bike\switzerland-latest.osrm
 echo address.db=data\at.db
