@@ -56,7 +56,7 @@ For "ontrip" queries, the travel time is the time between the given `departure_t
 
 ### OnTrip Station Start
 
-This query is useful if the traveler is currently at a station (or planning to be at a station) and wants to compute optimal journeys to their destination (station or location). For "ontrip" queries, the travel time is the time between the given `departure_time` (which is actually the arrival time when `search_dir` is set to `Forward`) and the departure/arrival at the search destination.
+This query is useful if the traveller is currently at a station (or planning to be at a station) and wants to compute optimal journeys to their destination (station or location). For "ontrip" queries, the travel time is the time between the given `departure_time` (which is actually the arrival time when `search_dir` is set to `Forward`) and the departure/arrival at the search destination.
 
   - ##### <span class="param">InputStation</span> required
     The departure station for `search_dir=Forward` or arrival station for `search_dir=Backward`. See [InputStation]({% link docs/api/buildingblocks.md %}#input-station).
