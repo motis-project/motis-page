@@ -29,7 +29,7 @@ apt update
 apt upgrade -y
 {% endhighlight %}
   - **Step 2**: Download the MOTIS distribution from [here](https://github.com/motis-project/motis/releases/latest/download/motis-linux.tar.bz2) and extract it. The directory structure must look exactly like the one shown on the right.
-  - **Start MOTIS**: `./motis` and visit [https://localhost:8080](https://localhost:8080).
+  - **Start MOTIS**: `./motis/motis` and visit [https://localhost:8080](https://localhost:8080).
 
 
 ### Windows Installation Guide
@@ -37,4 +37,4 @@ apt upgrade -y
 Tested on Windows 10.
 
   - **Step 1**: Download the MOTIS distribution from [here](https://github.com/motis-project/motis/releases/latest/download/motis-windows.zip) and extract it. The directory structure must look exactly like the one shown on the right.
-  - **Start MOTIS**: `motis.exe` and visit [https://localhost:8080](https://localhost:8080).
+  - **Start MOTIS**: `motis\motis.exe` and visit [https://localhost:8080](https://localhost:8080).
