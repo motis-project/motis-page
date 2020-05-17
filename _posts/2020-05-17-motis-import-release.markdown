@@ -38,7 +38,14 @@ The HAFAS Rohdaten for Switzerland are in UTF-8 encoding. Since MOTIS currently 
 
 ## Support for Data of the Aachener Verkehrsverbund (AVV)
 
-The Aachener Verkehrsverbund (AVV) provides open data HAFAS Rohdaten at [opendata.avv.de/current_HAFAS](http://opendata.avv.de/current_HAFAS/). With the new v0.2 release, MOTIS is now capable of parsing this dataset including "Durchbindungen" and "Vereinigungen". Unfortunately, the file `zeitvs` containing timezone and daylight saving time information cannot be handled by MOTIS at the moment. Replacing this file with the following lines, sovles this issue for now:
+The Aachener Verkehrsverbund (AVV) provides open data HAFAS Rohdaten at [opendata.avv.de/current_HAFAS](http://opendata.avv.de/current_HAFAS/). With the new v0.2 release, MOTIS is now capable of parsing this dataset (HRD v5.20) including "Durchbindungen" and "Vereinigungen". Unfortunately, the file `zeitvs` containing timezone and daylight saving time information cannot be handled by MOTIS at the moment. Replacing this file with the following lines, sovles this issue for now:
 
     0000000 +0100 +0200 29032020 0200 25102020 0300 +0200 28032021 0200 31102021 0300
     8000000 +0100 +0200 29032020 0200 25102020 0300 +0200 28032021 0200 31102021 0300
+
+A demo instance is available at: [avv.motis-project.de](https://avv.motis-project.de/).
+
+
+## How Does It Look Like?
+
+![MOTIS Import Shell](/assets/motis-import.svg)
