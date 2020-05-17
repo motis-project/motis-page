@@ -1,48 +1,10 @@
-motis
-├── at-example
-├── motis
-├── osrm-contract
-├── osrm-extract
-├── parking-prepare
-├── path-prepare
-├── ppr-preprocess
-├── osrm-profiles
-├── ppr-profiles
-├── web
-└── data
-    ├── switzerland-latest.osm.pbf
-    └── hrd
-        ├── ATTRIBUT_DE
-        ├── ATTRIBUT_EN
-        ├── ATTRIBUT_FR
-        ├── ATTRIBUT_IT
-        ├── BAHNHOF
-        ├── BETRIEB_DE
-        ├── BETRIEB_EN
-        ├── BETRIEB_FR
-        ├── BETRIEB_IT
-        ├── BFKOORD
-        ├── BFKOORD_GEO
-        ├── BFPRIOS
-        ├── BHFART
-        ├── BITFELD
-        ├── DURCHBI
-        ├── ECKDATEN
-        ├── FEIERTAG
-        ├── FPLAN
-        ├── GLEIS
-        ├── GRENZHLT
-        ├── INFOTEXT_DE
-        ├── INFOTEXT_EN
-        ├── INFOTEXT_FR
-        ├── INFOTEXT_IT
-        ├── KMINFO
-        ├── METABHF
-        ├── RICHTUNG
-        ├── UMSTEIGB
-        ├── UMSTEIGL
-        ├── UMSTEIGV
-        ├── UMSTEIGZ
-        ├── UMSTEIGZ_VERKEHRSTAGE
-        ├── ZEITVS
-        └── ZUGART
+.
+├── config.ini
+├── data
+│   ├── hrd
+│   └── nordrhein-westfalen-latest.osm.pbf
+└── motis
+    ├── motis[.exe]
+    ├── osrm-profiles
+    ├── ppr-profiles
+    └── web

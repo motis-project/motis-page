@@ -62,6 +62,8 @@ layout: default
           {% highlight batch %}{% include {{ c.file }} %}{% endhighlight %}
           {% elsif c.language == 'json' %}
           {% highlight json %}{% include {{ c.file }} %}{% endhighlight %}
+          {% elsif c.language == 'ini' %}
+          {% highlight ini %}{% include {{ c.file }} %}{% endhighlight %}
           {% elsif c.language == 'image' %}
           <img src="{{ '/assets/' | append: c.file | relative_path }}" style="max-width: 100%"/>
           {% else %}

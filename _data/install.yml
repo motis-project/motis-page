@@ -1,9 +1,6 @@
 - title: "Install Directory"
   language: plaintext
   file: samples/install-directory.txt
-- title: "Linux Preprocess"
-  language: bash
-  file: samples/install-linux.sh
-- title: "Windows Preprocess"
-  language: batch
-  file: samples/install-windows.bat
+- title: "config.ini"
+  language: ini
+  file: samples/config.ini
