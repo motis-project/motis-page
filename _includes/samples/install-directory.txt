@@ -2,7 +2,7 @@
 ├── config.ini
 ├── data
 │   ├── hrd
-│   └── nordrhein-westfalen-latest.osm.pbf
+│   └── switzerland-latest.osm.pbf
 └── motis
     ├── motis[.exe]
     ├── osrm-profiles
