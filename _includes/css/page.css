@@ -181,7 +181,7 @@ a {
 
 .slogan {
   position: relative;
-  top: 35%;
+  top: 30%;
   padding: 0 1em;
 }
 
@@ -196,7 +196,7 @@ a {
   }
   .slogan {
     text-shadow: white 0px 0px 4px;
-    left: 53%;
+    left: 7%;
     width: 43%;
   }
   .map {
