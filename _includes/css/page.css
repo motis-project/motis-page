@@ -66,6 +66,10 @@ body {
   font-weight: bold;
 }
 
+.card-footer a:hover {
+  color: white;
+}
+
 .card-footer a:first-child {
   margin-left: 0;
 }
