@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "MOTIS v0.3: Tiles Module & Improved GTFS Support"
-date:   2020-05-17 18:45:00 +0100
+date:   2020-06-10 21:33:00 +0100
 categories: release
 author: felixguendling
 version: 0.3
