@@ -6,7 +6,7 @@ code: install
 
 ## Installation
 
-This section describes how to setup a server similar to the [demo server](https://switzerland.motis-project.de) but without real-time updates.
+This section describes how to setup a server similar to the [demo server](https://europe.motis-project.de) but without real-time updates.
 
 
 ### Data Download
