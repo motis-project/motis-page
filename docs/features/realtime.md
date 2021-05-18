@@ -12,4 +12,4 @@ Real-time data can be processed in either the proprietary RISML format (develope
 
 ### Try it out live:
 
-  - [Demo](https://switzerland.motis-project.de)
+  - [Demo](https://europe.motis-project.de/)
