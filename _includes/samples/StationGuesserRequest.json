@@ -10,4 +10,4 @@ curl -d "{
   }
 }" -X POST \
    -H "Content-Type: application/json" \
-   https://switzerland.motis-project.de
+   https://europe.motis-project.de/
