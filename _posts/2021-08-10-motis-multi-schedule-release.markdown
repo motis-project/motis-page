@@ -53,3 +53,5 @@ services:
 ```
 
 You need a `data` folder which provides a `config.ini` as well as the timetable and OpenStreetMap dataset. The data folder will be mounted inside the Docker container as `/data`. Finally, you can start MOTIS using `sudo docker compose up -d`. For more details on how to configure MOTIS, see in the [GitHub Wiki](https://github.com/motis-project/motis/wiki/Configuration).
+
+All MOTIS Docker images (releases and nightly-builds) can be found here: [github.com/motis-project/motis/pkgs/container/motis](https://github.com/motis-project/motis/pkgs/container/motis).
