@@ -44,7 +44,7 @@ One simple way to test the Docker image is to use `docker compose`. For this, fo
 version: "3.9"
 services:
   motis:
-    image: ghcr.io/motis-project/motis:v0.4
+    image: ghcr.io/motis-project/motis:0.4
     ports:
       - "80:8080"
     volumes:
