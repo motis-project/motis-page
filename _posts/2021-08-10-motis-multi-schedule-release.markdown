@@ -4,7 +4,7 @@ title:  "MOTIS v0.4: Multi Schedule & Docker + Raspberry Pi Support"
 date:   2021-08-10 21:33:00 +0100
 categories: release
 author: felixguendling
-version: 0.4
+version: 0.4.0
 ---
 
 MOTIS version v0.4 supports loading multiple timetables thanks to [@sfahnens](https://github.com/sfahnens). We demo this new feature on our Europe instance on [europe.motis-project.de](https://europe.motis-project.de) where the German [DELFI GTFS timetable](https://www.opendata-oepnv.de/ht/de/organisation/delfi/startseite), the Swiss [HRD dataset](https://opentransportdata.swiss/en/dataset), and the [Flixbus GTFS dataset](https://transitfeeds.com/p/flixbus-united-states/1246). Loading more timetables is possible. We are working on covering whole Europe.
