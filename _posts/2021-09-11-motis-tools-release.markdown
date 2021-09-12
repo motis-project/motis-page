@@ -4,12 +4,12 @@ title:  "MOTIS v0.5: Tooling Subcommands, musl Binaries, Docker Improvements"
 date:   2021-09-11 22:02:00 +0100
 categories: release
 author: felixguendling
-version: 0.5.3
+version: 0.5.2
 ---
 
 MOTIS version v0.5 now comes with subcommands. If no subcommand is given, the MOTIS binary will behave as usual (e.g. start the server or process a batch file of queries depending on the `--mode`). A subcommand can be given like this `motis generate --help`. This will print the help message of the query generator subcommand. The subcommands are documented in the [MOTIS Wiki](https://github.com/motis-project/motis/wiki/Tools). Please feel free to support us in extending the documentation (e.g. by filing an issue) if you find something is missing.
 
-MOTIS uses [mimalloc](https://github.com/microsoft/mimalloc) since version v0.5.3. Without, the [Europe demo](https://europe.motis-project.de) will not be able to load on with 64GB RAM. With mimalloc this issue is solved.
+MOTIS uses [mimalloc](https://github.com/microsoft/mimalloc) since version v0.5.2. Without, the [Europe demo](https://europe.motis-project.de) will not be able to load on with 64GB RAM. With mimalloc this issue is solved.
 
 ## Do a Full Evaluation Run
 
