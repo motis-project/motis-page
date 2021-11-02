@@ -28,7 +28,7 @@ add-apt-repository -y ppa:ubuntu-toolchain-r/test
 apt update
 apt upgrade -y
 {% endhighlight %}
-  - **Step 2**: Download the MOTIS distribution from [here](https://github.com/motis-project/motis/releases/latest/download/motis-linux.tar.bz2) and extract it. The directory structure must look exactly like the one shown on the right.
+  - **Step 2**: Download the MOTIS distribution from [here](https://github.com/motis-project/motis/releases/latest/download/motis-linux-amd64.tar.bz2) and extract it. The directory structure must look exactly like the one shown on the right.
   - **Start MOTIS**: `./motis/motis` and visit [http://localhost:8080](http://localhost:8080).
 
 
