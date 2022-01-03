@@ -4,7 +4,7 @@ title:  "MOTIS v0.4: Multi Schedule & Docker + Raspberry Pi Support"
 date:   2021-08-10 21:33:00 +0100
 categories: release
 author: felixguendling
-version: 0.4
+version: 0.4.0
 ---
 
 MOTIS version v0.4 supports loading multiple timetables thanks to [@sfahnens](https://github.com/sfahnens). We demo this new feature on our Europe instance on [europe.motis-project.de](https://europe.motis-project.de) where the German [DELFI GTFS timetable](https://www.opendata-oepnv.de/ht/de/organisation/delfi/startseite), the Swiss [HRD dataset](https://opentransportdata.swiss/en/dataset), and the [Flixbus GTFS dataset](https://transitfeeds.com/p/flixbus-united-states/1246). Loading more timetables is possible. We are working on covering whole Europe.
@@ -44,7 +44,7 @@ One simple way to test the Docker image is to use `docker compose`. For this, fo
 version: "3.9"
 services:
   motis:
-    image: ghcr.io/motis-project/motis:v0.4
+    image: ghcr.io/motis-project/motis:0.4
     ports:
       - "80:8080"
     volumes:
@@ -53,3 +53,5 @@ services:
 ```
 
 You need a `data` folder which provides a `config.ini` as well as the timetable and OpenStreetMap dataset. The data folder will be mounted inside the Docker container as `/data`. Finally, you can start MOTIS using `sudo docker compose up -d`. For more details on how to configure MOTIS, see in the [GitHub Wiki](https://github.com/motis-project/motis/wiki/Configuration).
+
+All MOTIS Docker images (releases and nightly-builds) can be found here: [github.com/motis-project/motis/pkgs/container/motis](https://github.com/motis-project/motis/pkgs/container/motis).
