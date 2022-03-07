@@ -67,16 +67,19 @@ Note that this information is compressed: it can be the case that the transport 
     The internal category ID.
   - ##### <span class="param">clasz</span> type `integer`
     The train class from 0 to 9. Since `class` is a reserved keyword in many programming languages, this entry is named `clasz`. This is an artificial classification:
-      - `0`: long distance high speed trains (e.g. TGV)
-      - `1`: long distance inter city trains
-      - `2`: long distance night trains
-      - `3`: regional express trains
-      - `4`: regional trains
-      - `5`: metro trains
-      - `6`: subway trains
-      - `7`: trams
-      - `8`: buses
-      - `9`: other (flights, ferries, taxis, etc.)
+      - 0 flights
+      - 1 long distance high speed trains (e.g. TGV)
+      - 2 long distance inter city trains
+      - 3 long distance buses
+      - 4 long distance night trains
+      - 5 regional express trains
+      - 6 regional trains
+      - 7 metro trains
+      - 8 subway trains
+      - 9 trams
+      - 10 buses
+      - 11 ships/ferries
+      - 12 other (taxis, etc.)
   - ##### <span class="param">train_nr</span> type `integer`
     The unique train if available.
   - ##### <span class="param">line_id</span> type `string`
