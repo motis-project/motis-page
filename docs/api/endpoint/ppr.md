@@ -9,7 +9,7 @@ The pedestrian routing API computes personalized pedestrian routes from a start 
 
   - ##### <span class="param">start</span> required, type [Position]({% link docs/api/buildingblocks.md %}#position)
     The start location.
-  - ##### <span class="param">destination</span> required, array of [Position]({% link docs/api/buildingblocks.md %}#position)
+  - ##### <span class="param">destinations</span> required, array of [Position]({% link docs/api/buildingblocks.md %}#position)
     At least one destination location.
   - ##### <span class="param">search_options</span> required
     The PPR search profile and maximum walk duration to use. See [PPR Search Profile]({% link docs/api/buildingblocks.md %}#ppr-search-profile).
