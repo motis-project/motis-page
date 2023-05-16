@@ -29,35 +29,40 @@ The following graphs show the memory usage of the old model and the new model. A
 
 Routing performance is a complex topic because so many factors (such as dataset size, query type, optimization criteria, etc.) can impact the routing performance. MOTIS supports a lot of query types, but here, we focus on on-trip queries. As a dataset, we use two weeks (16th of May - 30th of May).
 
-<table>
-  <thead>
-    <tr>
-      <th>Routing</th>
-      <th>Average</th>
-      <th>Median</th>
-      <th>q99</th>
-      <th>q90</th>
-      <th>q80</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>old</td>
-      <td>1,118</td>
-      <td>3,803</td>
-      <td>2,078</td>
-      <td>1,528</td>
-      <td>892</td>
-    </tr>
-    <tr>
-      <td>377.6598</td>
-      <td>823</td>
-      <td>636</td>
-      <td>540</td>
-      <td>366</td>
-    </tr>
-  </tbody>
-</table>
+<p align="center" style="margin-top: 10px; margin-bottom: 10px">
+  <table>
+    <thead>
+      <tr>
+        <th>Routing</th>
+        <th>Average</th>
+        <th>q99</th>
+        <th>q90</th>
+        <th>q80</th>
+        <th>q50</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>old</td>
+        <td>1,118</td>
+        <td>3,803</td>
+        <td>2,078</td>
+        <td>1,528</td>
+        <td>892</td>
+      </tr>
+      <tr>
+        <td>new</td>
+        <td>378</td>
+        <td>823</td>
+        <td>636</td>
+        <td>540</td>
+        <td>366</td>
+      </tr>
+    </tbody>
+  </table>
+</p>
+
+The new version is on average roughly **3x as fast** for this particular query type, cutting the 99th percentile from almost 3,803ms to 823ms.
 
 ## Using the new Core
 
