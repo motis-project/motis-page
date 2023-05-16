@@ -14,6 +14,51 @@ MOTIS v0.9.0 is the first version that offers to disable the old and active the 
 - Furthermore, the `schedule.raw` intermediate format got eliminated which speeds up the loading of data significantly. Additionally, it saves a lot of memory because previously the `schedule.raw` had to be loaded into memory when building the routing graph - which more than double the memory requirements of MOTIS in many cases.
 
 
+The following graphs show the memory usage of the old model and the new model. As we can see on the scales (50GB vs 5GB), the new data model is roughly 10x more efficient.
+
+### Memory usage of the old data model
+
+![memory usage graph of the old data model](/assets/memory-old.png)
+
+### Memory usage of the new data model
+
+![memory usage graph of the new data model](/assets/memory-new.png)
+
+
+## Performance
+
+Routing performance is a complex topic because so many factors (such as dataset size, query type, optimization criteria, etc.) can impact the routing performance. MOTIS supports a lot of query types, but here, we focus on on-trip queries. As a dataset, we use two weeks (16th of May - 30th of May).
+
+<table>
+  <thead>
+    <tr>
+      <th>Routing</th>
+      <th>Average</th>
+      <th>Median</th>
+      <th>q99</th>
+      <th>q90</th>
+      <th>q80</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>old</td>
+      <td>1,118</td>
+      <td>3,803</td>
+      <td>2,078</td>
+      <td>1,528</td>
+      <td>892</td>
+    </tr>
+    <tr>
+      <td>377.6598</td>
+      <td>823</td>
+      <td>636</td>
+      <td>540</td>
+      <td>366</td>
+    </tr>
+  </tbody>
+</table>
+
 ## Using the new Core
 
 MOTIS now has a new flag to tell it to not populate the old data model: `dataset.no_schedule=true`. Like every other configuration variable, it can either be provided in form of a `config.ini`, command line parameter or environment variable. Note that currently only the routing functionality is available with the new core. Modules such as `railviz`, `lookup`, `guesser`, `path`, `parking`, `cc` or `revise` will be updated step by step to support the new `nigiri` data model.
@@ -38,6 +83,8 @@ The following setup provides door-to-door routing based on nigiri (without loadi
 modules=nigiri
 modules=intermodal
 modules=osrm
+
+intermodal.router=nigiri
 
 # Configure datasets
 import.paths=schedule-avv:AVV_HAFAS_520.zip
