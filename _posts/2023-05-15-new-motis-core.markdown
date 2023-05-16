@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "MOTIS v0.9: New MOTIS Core"
-date:   2023-05-15 23:02:00 +0200
+date:   2023-05-16 16:10:00 +0200
 categories: release
 author: felixguendling
-version: 0.9.0
+version: 0.9.1
 ---
 
 MOTIS v0.9.0 is the first version that offers to disable the old and active the new timetable datamodel. The new datamodel is contained in the `nigiri` module where nigiri is an internal acronym which stands for "Next Generation Routing". There are several major differences and improvements between the old and the new model:
@@ -23,45 +23,33 @@ To configure `nigiri`, you need to set the following variables. This will provid
 ```ini
 modules=nigiri
 
-# Configure datasets
-import.paths=schedule-delfi:input/schedule/delfi
+# Configure timetables
+import.paths=schedule-avv:AVV_HAFAS_520.zip
+import.paths=schedule-ber:berlin.zip
 
-# First day of the schedule to load
+# Configure schedule range
 nigiri.first_day=2023-05-15
-
-# Number of days to load
 nigiri.num_days=7
-
-# Write loaded data model image to disk.
-# Speeds up the loading of data.
-nigiri.no_cache=false
 ```
 
 The following setup provides door-to-door routing based on nigiri (without loading the old data model).
 
 ```ini
-# Load modules required for door-to-door routing
 modules=nigiri
 modules=intermodal
 modules=osrm
-modules=lookup
 
 # Configure datasets
-import.paths=schedule-delfi:input/schedule/delfi
+import.paths=schedule-avv:AVV_HAFAS_520.zip
+import.paths=schedule-ber:berlin.zip
 import.paths=osm:input/osm.pbf
 
-# OSRM profiles
-osrm.profiles=/home/felix/code/motis/deps/osrm-backend/profiles/foot.lua
+# OSRM profiles (add more if needed)
+osrm.profiles=motis/profiles-osrm/foot.lua
 
-# First day of the schedule to load
+# Configure schedule range
 nigiri.first_day=2023-05-15
-
-# Number of days to load
 nigiri.num_days=7
-
-# Write loaded data model image to disk.
-# Speeds up the loading of data.
-nigiri.no_cache=false
 
 # Provide /lookup/geo_station target
 # as an alternative to the lookup module
@@ -69,7 +57,7 @@ nigiri.no_cache=false
 nigiri.geo_lookup=true
 ```
 
-Note that `nigiri` requires you to set a non-empty tag for every schedule (here `delfi`).
+Note that `nigiri` requires you to set a non-empty tag for every schedule (here `delfi`). As you can see, nigiri is capable of loading ZIP files directly so you don't have to unpack the zip archives before loading them with MOTIS.
 
 
 ## API Improvements
@@ -182,6 +170,8 @@ Here a comparison of a intermodal routing request with the old and the new API:
   "router": "/nigiri"
 }
 ```
+
+As you can see, you can skip now the message envelope containing `destination` and `content`. In case of `union` data types, the type information (which had previously been outside the union data type) is now encoded in the `_type` field. This is necessary to make this API compatible to OpenAPI.
 
 
 ## Sponsor
