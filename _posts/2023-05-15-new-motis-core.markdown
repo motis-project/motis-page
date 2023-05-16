@@ -44,19 +44,19 @@ Routing performance is a complex topic because so many factors (such as dataset 
     <tbody>
       <tr>
         <td>old</td>
-        <td>1,118</td>
-        <td>3,803</td>
-        <td>2,078</td>
-        <td>1,528</td>
-        <td>892</td>
+        <td>1,118 ms</td>
+        <td>3,803 ms</td>
+        <td>2,078 ms</td>
+        <td>1,528 ms</td>
+        <td>892 ms</td>
       </tr>
       <tr>
         <td>new</td>
-        <td>378</td>
-        <td>823</td>
-        <td>636</td>
-        <td>540</td>
-        <td>366</td>
+        <td>378 ms</td>
+        <td>823 ms</td>
+        <td>636 ms</td>
+        <td>540 ms</td>
+        <td>366 ms</td>
       </tr>
     </tbody>
   </table>
