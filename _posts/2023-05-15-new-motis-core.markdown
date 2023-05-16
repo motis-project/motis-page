@@ -18,11 +18,11 @@ The following graphs show the memory usage of the old model and the new model. A
 
 ### Memory usage of the old data model
 
-![memory usage graph of the old data model](/assets/memory-old.png)
+![memory usage graph of the old data model](/assets/memory_usage_old.png)
 
 ### Memory usage of the new data model
 
-![memory usage graph of the new data model](/assets/memory-new.png)
+![memory usage graph of the new data model](/assets/memory_usage_new.png)
 
 
 ## Performance
