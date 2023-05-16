@@ -27,7 +27,7 @@ The following graphs show the memory usage of the old model and the new model. A
 
 ## Performance
 
-Routing performance is a complex topic because so many factors (such as dataset size, query type, optimization criteria, etc.) can impact the routing performance. MOTIS supports a lot of query types, but here, we focus on on-trip queries. As a dataset, we use two weeks (16th of May - 30th of May).
+Routing performance is a complex topic because so many factors (such as dataset size, query type, optimization criteria, etc.) can impact the routing performance. MOTIS supports a lot of query types, but here, we focus on on-trip queries. As a dataset, we use two weeks (16th of May - 30th of May) with the publicly available official datasets from Switzerland, the Netherlands and Germany.
 
 <p align="center" style="margin-top: 30px; margin-bottom: 10px">
   <table class="table">
