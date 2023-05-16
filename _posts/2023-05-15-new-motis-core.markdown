@@ -14,7 +14,7 @@ MOTIS v0.9.0 is the first version that offers to disable the old and active the 
 - Furthermore, the `schedule.raw` intermediate format got eliminated which speeds up the loading of data significantly. Additionally, it saves a lot of memory because previously the `schedule.raw` had to be loaded into memory when building the routing graph - which more than double the memory requirements of MOTIS in many cases.
 
 
-The following graphs show the memory usage of the old model and the new model. As we can see on the scales (50GB vs 5GB), the new data model is roughly 10x more efficient.
+The following graphs show the memory usage of the old model and the new model. As we can see on the scales (50GB vs 5GB), the new data model is roughly **10x more efficient**.
 
 ### Memory usage of the old data model
 
@@ -29,8 +29,8 @@ The following graphs show the memory usage of the old model and the new model. A
 
 Routing performance is a complex topic because so many factors (such as dataset size, query type, optimization criteria, etc.) can impact the routing performance. MOTIS supports a lot of query types, but here, we focus on on-trip queries. As a dataset, we use two weeks (16th of May - 30th of May).
 
-<p align="center" style="margin-top: 10px; margin-bottom: 10px">
-  <table>
+<p align="center" style="margin-top: 30px; margin-bottom: 10px">
+  <table class="table">
     <thead>
       <tr>
         <th>Routing</th>
@@ -62,7 +62,7 @@ Routing performance is a complex topic because so many factors (such as dataset 
   </table>
 </p>
 
-The new version is on average roughly **3x as fast** for this particular query type, cutting the 99th percentile from almost 3,803ms to 823ms.
+The new version is on average roughly **3x as fast** for this particular query type, cutting the 99th percentile from almost 3,803ms to 823ms which is a **4,6x improvement**.
 
 ## Using the new Core
 
