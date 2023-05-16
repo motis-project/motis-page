@@ -394,9 +394,14 @@ a {
 }
 
 .code-example-body {
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 0 0 10px 10px;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 0px 0px 1px;
+  background: #110b1c;
+}
+
+.code-example-body:has(img) {
+  background: #fdfdfd;
 }
 
 .code-example-body, .code-example-body code, .CodeMirror-code, .CodeMirror-line {
