@@ -14,15 +14,21 @@ MOTIS v0.9.0 is the first version that offers to disable the old and active the 
 - Furthermore, the `schedule.raw` intermediate format got eliminated which speeds up the loading of data significantly. Additionally, it saves a lot of memory because previously the `schedule.raw` had to be loaded into memory when building the routing graph - which more than double the memory requirements of MOTIS in many cases.
 
 
-The following graphs show the memory usage of the old model and the new model. As we can see on the scales (50GB vs 5GB), the new data model is roughly **10x more efficient**.
+The following graphs show the memory usage of the old model and the new model. As we can see on the scales (50GB vs 3GB), the new data model is more than **10x more efficient**.
 
 ### Memory usage of the old data model
 
 ![memory usage graph of the old data model](/assets/memory_usage_old.png)
 
-### Memory usage of the new data model
+### Memory usage of the new data model with ZIP files
 
 ![memory usage graph of the new data model](/assets/memory_usage_new.png)
+
+### Memory usage of the new data model on filesystem
+
+When you extract the files, the new core can use a memory mapping to save even more memory.
+
+![memory usage graph of the new data model](/assets/memory_usage_new_fs.png)
 
 
 ## Performance
