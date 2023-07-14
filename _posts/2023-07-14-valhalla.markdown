@@ -1,0 +1,46 @@
+---
+layout: post
+title:  "MOTIS v0.11: Valhalla Street Routing"
+date:   2023-07-14 17:10:00 +0200
+categories: release
+author: felixguendling
+version: 0.11.0
+---
+
+With the new MOTIS v0.11 release, we're happy to announce that we are almost finished with transitioning the intermodal door-to-door real-time routing over to the new *nigiri* core. The MOTIS web user interface is now completely usable without loading the old data model at all. To enable this, all API endpoints used by the UI were reimplemented based on the nigiri datamodel.
+
+Those reimplementations based on the new nigiri core can be enabled with configuration flags in the nigiri module:
+
+  - `nigiri.lookup`:
+    - `/lookup/geo_station`: stations in a radius
+    - `/lookup/station_location`: location of a station
+    - `/lookup/schedule_info`: gives the date range of the schedule
+  - `nigiri.railviz`
+    - `/railviz/map_config`: gives an initial map excerpt that contains most of the trips (excluding outliers)
+    - `/railviz/get_trains`: can answer "for a specific time window: which trips are a specific area" - this is required to render the map with real-time trips
+    - `/railviz/get_trips`: current position of a set of trips
+    - `/railviz/get_station`: departure and arrival tables
+  - `nigiri.guesser`:
+    - `/guesser`: auto-complete for stop names
+  - `nigiri.routing`:
+    - `/trip_to_connection`: gives the complete run of a trip from first to last stop
+
+All APIs give the up-to-date real time status according to the configured GTFS-RT endpoints.
+
+![map of Europe with connections from Brig (CH) to Amsterdam](/assets/motis_europe_2.png)
+
+
+## Valhalla Street Routing
+
+In addition to [OSRM](https://github.com/motis-project/osrm-backend) and [PPR](https://github.com/motis-project/ppr), MOTIS now supports the [Valhalla](https://valhalla.github.io/valhalla/) street routing engine. Valhalla using a tiling-approach which adds a new interesting trade-off to the set of routers already supported by MOTIS. The dataset is split into tiles and stored on-disk. Only tiles that are needed for the current routing request are loaded into memory. Therefore, the memory usage is much lower than with for example OSRM. However, Valhalla is also not as fast as OSRM. If you want to try out MOTIS with the new `valhalla` module, you only have to add `modules=valhalla` to your `config.ini`. Make sure to disable OSRM and PPR since the `valhalla` module replaces both of them.
+
+
+## Sponsor
+
+This work is partially sponsored by [INIT](https://www.initse.com).
+
+<p align="center" style="margin-bottom: 30px">
+  <a href="https://www.initse.com">
+    <img src="/assets/init_logo.svg" alt="INIT Logo" style="width: 140px" />
+  </a>
+</p>
