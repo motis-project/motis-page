@@ -41,4 +41,4 @@ MOTIS also contains variants of these algorithms which are not described in the 
 
 ### Try it out live:
 
-  - [Demo](https://switzerland.motis-project.de)
+  - [Demo](https://europe.motis-project.de/)
