@@ -73,6 +73,8 @@ The pedestrian routing response contains routes from the start location to each 
     - `FOOTWAY`: Walk along a footpath.
     - `CROSSING`: Cross a street or railway/tram tracks.
     - `ELEVATOR`: Use an elevator.
+    - `ENTRANCE`: Use an entrance.
+    - `CYCLE_BARRIER`: Pass a cycle barrier.
   - ##### <span class="param">street_name</span> type `string`
     The name of the street, if applicable (otherwise an empty string).
   - ##### <span class="param">street_type</span> type `string`
@@ -87,6 +89,7 @@ The pedestrian routing response contains routes from the start location to each 
     - `STAIRS`
     - `ESCALATOR`
     - `MOVING_WALKWAY`
+    - `PLATFORM`
     - `SERVICE`
     - `PEDESTRIAN`
     - `LIVING`
@@ -125,6 +128,39 @@ The pedestrian routing response contains routes from the start location to each 
     - `UNKNOWN`
     - `NO`
     - `YES`
+  - ##### <span class="param">door_type</span> type `string`
+    If `step_type` is `ENTRANCE`, this attribute specifies the type of door. See [OpenStreetMap](https://wiki.openstreetmap.org/wiki/Key:door) for descriptions of the various crossing types.
+
+    - `UNKNOWN` (default)
+    - `YES`
+    - `NO`
+    - `HINGED`
+    - `SLIDING`
+    - `REVOLVING`
+    - `FOLDING`
+    - `TRAPDOOR`
+    - `OVERHEAD`
+  - ##### <span class="param">automatic_door_type</span> type `string`
+    If `step_type` is `ENTRANCE`, this attribute specifies the type of automatic door. See [OpenStreetMap](https://wiki.openstreetmap.org/wiki/Key:automatic_door) for descriptions of the various crossing types.
+
+    - `UNKNOWN` (default)
+    - `YES`
+    - `NO`
+    - `BUTTON`
+    - `MOTION`
+    - `FLOOR`
+    - `CONTINUOUS`
+    - `SLOWDOWN_BUTTON`
+  - ##### <span class="param">traffic_signals_sound</span> type `string`
+    If this is a crossing with traffic signals, specifies whether there are sound signals.
+    - `UNKNOWN`
+    - `NO`
+    - `YES`
+  - ##### <span class="param">traffic_signals_vibration</span> type `string`
+    If this is a crossing with traffic signals, specifies whether there are vibration signals.
+    - `UNKNOWN`
+    - `NO`
+    - `YES`
 
 ## Edge
 
@@ -148,6 +184,8 @@ The pedestrian routing response contains routes from the start location to each 
     - `FOOTWAY`
     - `CROSSING`
     - `ELEVATOR`
+    - `ENTRANCE`
+    - `CYCLE_BARRIER`
   - ##### <span class="param">street_type</span> type `string`
     The type of street, footway or railway. See [RouteStep](#routestep).
   - ##### <span class="param">crossing_type</span> type `string`
@@ -160,7 +198,14 @@ The pedestrian routing response contains routes from the start location to each 
     The direction of stairs (up or down).
   - ##### <span class="param">handrail</span> type `string`
     Whether the stairs have handrails. See [RouteStep](#routestep).
-
+  - ##### <span class="param">door_type</span> type `string`
+    If `edge_type` is `ENTRANCE`, this attribute specifies the type of door. See [RouteStep](#routestep).
+  - ##### <span class="param">automatic_door_type</span> type `string`
+    If `edge_type` is `ENTRANCE`, this attribute specifies the type of automatic door. See [RouteStep](#routestep).
+  - ##### <span class="param">traffic_signals_sound</span> type `string`
+    If this is a crossing with traffic signals, specifies whether there are sound signals. See [RouteStep](#routestep).
+  - ##### <span class="param">traffic_signals_vibration</span> type `string`
+    If this is a crossing with traffic signals, specifies whether there are vibration signals. See [RouteStep](#routestep).
 
 ## PPR Search Profiles
 
