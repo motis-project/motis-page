@@ -47,6 +47,7 @@
       }
     ],
     "search_type": "Accessibility",
-    "search_dir": "Forward"
+    "search_dir": "Forward",
+    "max_transfers": -1
   }
 }
