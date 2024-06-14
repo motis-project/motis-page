@@ -48,6 +48,7 @@
     ],
     "search_type": "Accessibility",
     "search_dir": "Forward",
-    "max_transfers": -1
+    "max_transfers": -1,
+    "bike_transport": false
   }
 }

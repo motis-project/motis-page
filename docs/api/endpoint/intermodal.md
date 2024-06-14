@@ -32,6 +32,8 @@ This is the intermodal routing API. Intermodal here means that start as well as 
     - `Backward`: the start parameter specifies the arrival of the journey. The destination parameter specifies the departure of the journey.
   - ##### <span class="param">max_transfers</span> optional, default is `-1`
     The maximum number of transfers allowed per journey. If set to `-1`, the internal default value is used.
+  - ##### <span class="param">bike_transport</span> optional, default is `false`
+    Whether only journeys where bike transport is allowed should be considered. If set to `true`, only trips where bike transport is allowed can be used.
 
 ## Start
 
