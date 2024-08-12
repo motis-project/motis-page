@@ -29,9 +29,9 @@ The collaboration roadmap contains further improvements in all areas:
   </a>
 </p>
 
-## New Stree Routing `osr`
+## New Street Routing `osr`
 
-In the past releases, MOTIS has also taken a big leap forward to become more scalable. With [`osr`](https://github.com/motis-project/osr), we have now the most memory-efficient street routing. It supports wheelchair routing, pedestrian routing, bike routing and car routing. We are fully committed to this routing now and will existing use cases such as park and ride or sharing mobility (`gbfs` module) to `osr`. This will enable us to provide better routing results and with less preprocessing time and a **10x reduced memory** usage.
+In the past releases, MOTIS has also taken a big leap forward to become more scalable. With [`osr`](https://github.com/motis-project/osr), we have now the most memory-efficient street routing. It supports wheelchair routing, pedestrian routing, bike routing and car routing. We are fully committed to this routing now and will add existing use cases such as park and ride or sharing mobility (`gbfs` module) to `osr`. This will enable us to provide better routing results with less preprocessing time and a **10x reduced memory** usage.
 
 
 ## New GeoCoding / Address Auto Complete `adr`
