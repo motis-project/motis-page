@@ -7,8 +7,6 @@
 
   <nav
     class="nav nav-masthead ml-sm-auto d-flex align-content-center mt-auto mb-auto">
-    <a class="nav-link {% if '/' == page.url %}active{% endif %}"
-       href="{% link index.html %}">About</a>
     <a class="nav-link {% if '/news.html' == page.url or page.url contains 'release' %}active{% endif %}"
        href="{% link news.html %}">News</a>
     <a class="nav-link {% if page.url contains 'docs' %}active{% endif %}"
