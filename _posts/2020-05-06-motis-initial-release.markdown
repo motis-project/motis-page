@@ -9,7 +9,7 @@ version: 0.1
 
 We are happy to announce the first MOTIS open source release! MOTIS is an acronym that stands for **M**ulti **O**bjective **T**ravel **I**nformation **S**ystem. One of its main features is computing optimal intermodal journeys (including private car, bicycle, bus, tram, trains, etc.) from door to door based on a real-time timetable.
 
-This post will not go into the details of the functionality of MOTIS; these are listed on the main page of [motis-project.de](https://motis-project.de) as well as on the "Docs" page. A description of the JSON API provided by MOTIS can be found [here]({% link docs/api/index.md %}).
+This post will not go into the details of the functionality of MOTIS; these are listed on the main page of [motis-project.de](https://motis-project.de) as well as on the "Docs" page. A description of the JSON API provided by MOTIS can be found [here](https://github.com/motis-project/motis).
 
 MOTIS started as a research software project at the Technical University of Darmstadt in cooperation with Deutsche Bahn and <a href="https://datagon.de/">datagon GmbH</a> in the early 2000s. Since then, the codebase has seen many new features and overhauls. MOTIS has been used for quality assurance at Deutsche Bahn and as a basis for [PANDA](https://inside.bahn.de/anschlusszug-panda/), a tool to assist train dispatchers in their decision making process which is developed by the [team of Prof. Dr. Matthias Müller-Hannemann at the Martin-Luther-Universität Halle-Wittenberg](https://www.informatik.uni-halle.de/arbeitsgruppen/datenstrukturen/).
 

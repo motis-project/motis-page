@@ -49,7 +49,7 @@ Routing performance is a complex topic because so many factors (such as dataset 
     </thead>
     <tbody>
       <tr>
-        <td>old</td>
+        <td>Pareto Dijkstra</td>
         <td>1,118 ms</td>
         <td>3,803 ms</td>
         <td>2,078 ms</td>
@@ -57,7 +57,7 @@ Routing performance is a complex topic because so many factors (such as dataset 
         <td>892 ms</td>
       </tr>
       <tr>
-        <td>new</td>
+        <td>Nigiri</td>
         <td>378 ms</td>
         <td>823 ms</td>
         <td>636 ms</td>

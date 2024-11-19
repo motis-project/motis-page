@@ -32,15 +32,6 @@ layout: default
           </a>
         </div>
 
-        <div class="mt-lg-5 mt-3 mb-1 share text-center">
-          Share article
-        </div>
-        <div class="mb-3 mb-lg-5 social-links">
-          <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank">{% include social/facebook.svg %}</a>
-          <a class="twitter" href="https://twitter.com/intent/tweet?text={{ page.title }}: {{ site.url }}{{ page.url }}" target="_blank">{% include social/twitter.svg %}</a>
-          <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&summary={{ page.title }}&source=motis-project.de">{% include social/linkedin.svg %}</a>
-        </div>
-
         {% if page.version %}
         <div class="mb-5">
           <a href="https://github.com/motis-project/motis/releases/tag/v{{ page.version }}">

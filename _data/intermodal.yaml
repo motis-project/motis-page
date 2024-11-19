@@ -1,6 +1,0 @@
-- title: "Intermodal Routing Request Example"
-  language: json
-  file: samples/IntermodalRequest.json
-- title: "Intermodal Routing Response Example"
-  language: json
-  file: samples/IntermodalResponse.json

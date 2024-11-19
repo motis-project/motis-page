@@ -1,8 +1,0 @@
-{
-  "destination": {
-    "type": "Module",
-    "target": "/ppr/profiles"
-  },
-  "content_type": "MotisNoMessage",
-  "content": {}
-}

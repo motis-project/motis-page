@@ -1,6 +1,0 @@
-- title: "config.ini"
-  language: ini
-  file: samples/config.ini
-- title: "Install Directory"
-  language: plaintext
-  file: samples/install-directory.txt

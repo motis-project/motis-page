@@ -1,6 +1,0 @@
-- title: "Station Guesser Request Example"
-  language: json
-  file: samples/GuesserRequest.json
-- title: "Station Guesser Response Example"
-  language: json
-  file: samples/GuesserResponse.json
